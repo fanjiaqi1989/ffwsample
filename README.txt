@@ -1,3 +1,2 @@
 2018.03.06
-333
-111
+this is a egret framework sample project.

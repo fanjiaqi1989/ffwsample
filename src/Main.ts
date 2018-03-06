@@ -33,6 +33,17 @@ class Main extends eui.UILayer {
      * loading process interface
      */
     private loadingView: LoadingUI;
+
+    public constructor(){
+        super();
+        this.addEventListener(eui.UIEvent.CREATION_COMPLETE,this.onInit,this);
+    }
+
+    private onInit(e:eui.UIEvent):void{
+        this.removeEventListener(eui.UIEvent.CREATION_COMPLETE,this.onInit,this);
+        
+    }
+
     protected createChildren(): void {
         super.createChildren();
         //inject the custom material parser

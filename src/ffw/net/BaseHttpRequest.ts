@@ -37,8 +37,8 @@ export class BaseHttpRequest extends egret.EventDispatcher {
     }
 
     private static onLoadExcetion(e:string){
-		ViewManager.ins.HideWaitingView();
-        ViewManager.ins.ShowTipTxt(e);
+		// ViewManager.ins.HideWaitingView();
+        // ViewManager.ins.ShowTipTxt(e);
     }
 
     /**

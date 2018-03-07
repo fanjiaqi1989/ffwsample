@@ -12,7 +12,7 @@ class ViewManager extends egret.DisplayObjectContainer {
 	 * 后续拓展 GameView2、GameView3、……
 	 */
 	private static _ins:ViewManager;
-
+	//---------------------------------------system---------------------------------//
 	//最顶层
 	public topLayer:egret.Sprite;
 	//弹出提示层
@@ -21,8 +21,18 @@ class ViewManager extends egret.DisplayObjectContainer {
 	private middleLayer:egret.Sprite;
 	//背景层
 	private bottomLayer:egret.Sprite;
+	//---------------------------------------system---------------------------------//
 
+	//---------------------------------------customer---------------------------------//
 
+	//登陆
+	private accountView:account.AccountView;
+	//大厅
+	private hallView:hall.HallView;
+	//游戏
+	private gameView:game.GameView;
+
+	//---------------------------------------customer---------------------------------//
 
 	public constructor() {
 		super();
@@ -50,7 +60,11 @@ class ViewManager extends egret.DisplayObjectContainer {
 	 * 初始化
 	 */
 	private init():void{
-
+		//添加游戏主背景
+		var bitmap:egret.Bitmap = new egret.Bitmap(RES.getRes("loginBg_jpg"));
+		bitmap.width = ffw.ScaleTool.stageW;
+		bitmap.height = ffw.ScaleTool.stageH;
+		this.bottomLayer.addChild(bitmap);
 	}
 
 	

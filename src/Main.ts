@@ -40,6 +40,10 @@ class Main extends eui.UILayer {
         let assetAdapter = new AssetAdapter();
         egret.registerImplementation("eui.IAssetAdapter",assetAdapter);
         egret.registerImplementation("eui.IThemeAdapter",new ThemeAdapter());
+
+        //1.初始化适屏类
+        ffw.ScaleTool.setParam(this.stage.stageWidth,this.stage.stageHeight);
+
         //Config loading process interface
         //设置加载进度界面
         this.loadingView = new LoadingUI();
@@ -123,7 +127,7 @@ class Main extends eui.UILayer {
             this.loadingView.setProgress(event.itemsLoaded, event.itemsTotal);
         }
     }
-    private textfield:egret.TextField;
+
     /**
      * 创建场景界面
      * Create scene interface

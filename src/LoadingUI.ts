@@ -38,7 +38,6 @@ class LoadingUI extends egret.Sprite {
 
     private createView():void {
 
-        //加载背景
         var img:eui.Image = new eui.Image();//RES.getRes("timg_jpg")
         img.source = RES.getVersionController().getVirtualUrl("resource/assets/Preload/loginBg.jpg");//"resource/loadingres/updatebg.jpg";
         img.width = ffw.ScaleTool.stageW;
@@ -53,7 +52,6 @@ class LoadingUI extends egret.Sprite {
         this.textField.textAlign = egret.HorizontalAlign.CENTER;
         ffw.ScaleTool.setCenterH(this.textField);
         this.textField.y = 560;
-
     }
 
     public setProgress(current:number, total:number):void {

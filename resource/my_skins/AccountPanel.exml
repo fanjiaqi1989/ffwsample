@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="AccountPanelSkin" width="1136" height="640" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="16200b62dd4" ></w:Config>
+	<e:Image width="100%" height="100%" source="loginBg_jpg" anchorOffsetX="0" anchorOffsetY="0" fillMode="scale"/>
+	<e:Panel width="573" height="358" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0" title="登陆">
+		<e:TextInput width="306" height="43" x="133" y="136" anchorOffsetX="0" anchorOffsetY="0" prompt="username"/>
+		<e:TextInput width="306" height="43" x="133.5" y="213" anchorOffsetX="0" anchorOffsetY="0" prompt="password"/>
+	</e:Panel>
+</e:Skin>

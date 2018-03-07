@@ -86,7 +86,7 @@ class Main extends eui.UILayer {
      */
     private onResourceLoadComplete(event:RES.ResourceEvent):void {
         if (event.groupName == "preload") {
-            // this.stage.removeChild(this.loadingView);
+            this.stage.removeChild(this.loadingView);
             RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
             RES.removeEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
             RES.removeEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
@@ -140,6 +140,7 @@ class Main extends eui.UILayer {
 
         //4.视图层初始化
         this.addChild(ViewManager.ins);
+        ViewManager.ins.showAccountView();
 
     }
 

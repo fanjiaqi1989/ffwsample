@@ -60,11 +60,21 @@ class ViewManager extends egret.DisplayObjectContainer {
 	 * 初始化
 	 */
 	private init():void{
-		//添加游戏主背景
-		var bitmap:egret.Bitmap = new egret.Bitmap(RES.getRes("loginBg_jpg"));
-		bitmap.width = ffw.ScaleTool.stageW;
-		bitmap.height = ffw.ScaleTool.stageH;
-		this.bottomLayer.addChild(bitmap);
+		
+	}
+
+	private removeAllCustomerView():void{
+		if(this.middleLayer.numChildren>0){
+			this.middleLayer.removeChildren();
+		}
+	}
+
+	public showAccountView():void{
+		this.removeAllCustomerView();
+		if(this.accountView == null){
+			this.accountView = new account.AccountView();
+		}
+		this.middleLayer.addChild(this.accountView);
 	}
 
 	

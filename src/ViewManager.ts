@@ -15,6 +15,8 @@ class ViewManager extends egret.DisplayObjectContainer {
 	//---------------------------------------system---------------------------------//
 	//最顶层
 	public topLayer:egret.Sprite;
+	//loading
+	public mask:utils.LoadingMask = new utils.LoadingMask();
 	//弹出提示层
 	public popLayer:egret.Sprite;
 	//主ui层
@@ -45,6 +47,8 @@ class ViewManager extends egret.DisplayObjectContainer {
 		this.addChild(this.middleLayer);
 		this.addChild(this.popLayer);
 		this.addChild(this.topLayer);
+		// this.topLayer.addChild(this.mask);
+		// this.mask.visible = false;
 
 		this.init();
 	}
@@ -75,6 +79,14 @@ class ViewManager extends egret.DisplayObjectContainer {
 			this.accountView = new account.AccountView();
 		}
 		this.middleLayer.addChild(this.accountView);
+	}
+
+	public showHallView():void{
+		this.removeAllCustomerView();
+		if(this.hallView == null){
+			this.hallView = new hall.HallView();
+		}
+		this.middleLayer.addChild(this.hallView);
 	}
 
 	

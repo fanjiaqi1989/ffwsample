@@ -2,8 +2,18 @@
 <e:Skin class="AccountPanelSkin" width="1136" height="640" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
 	<w:Config id="16200b62dd4" ></w:Config>
 	<e:Image width="100%" height="100%" source="loginBg_jpg" anchorOffsetX="0" anchorOffsetY="0" fillMode="scale"/>
-	<e:Panel width="573" height="358" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0" title="登陆">
-		<e:TextInput width="306" height="43" x="133" y="136" anchorOffsetX="0" anchorOffsetY="0" prompt="username"/>
-		<e:TextInput width="306" height="43" x="133.5" y="213" anchorOffsetX="0" anchorOffsetY="0" prompt="password"/>
+	<e:Panel id="login_panel" horizontalCenter="0" verticalCenter="0">
+		<e:Skin minHeight="230" minWidth="450">
+			<e:Image left="0" right="0" bottom="0"  top="0" source="border_png" scale9Grid="2,2,12,12" />
+			<e:Group id="moveArea" left="0" right="0" top="0" height="45">
+				<e:Image left="0" right="0" bottom="0"  top="0" source="header_png"/>
+				<e:Label id="titleDisplay" size="20" fontFamily="Tahoma" textColor="0xFFFFFF"
+						wordWrap="false" left="15" right="5" verticalCenter="0"/>
+			</e:Group>
+
+			<e:TextInput width="306" height="43" x="72" y="85" anchorOffsetX="0" anchorOffsetY="0" prompt="username"/>
+			<e:TextInput width="306" height="43" x="77" y="128" anchorOffsetX="0" anchorOffsetY="0" prompt="password"/>
+			<e:Button id="closeButton" label="确定" bottom="5" horizontalCenter="0"/>
+		</e:Skin>
 	</e:Panel>
 </e:Skin>

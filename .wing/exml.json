@@ -3,5 +3,10 @@
         "path": "account\\ui\\AccountPanel.ts",
         "class": "AccountPanel",
         "parentPath": ""
+    },
+    "162044ccd05": {
+        "path": "hall\\ui\\HallPanel.ts",
+        "class": "HallPanel",
+        "parentPath": ""
     }
 }

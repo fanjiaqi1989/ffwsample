@@ -52,3 +52,5 @@ declare module skins{
 }
 declare class AccountPanelSkin extends eui.Skin{
 }
+declare class HallPanelSkin extends eui.Skin{
+}

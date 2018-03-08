@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="HallPanelSkin" width="1136" height="640" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="162044ccd05" ></w:Config>
+	<e:Image width="100%" height="100%" x="0" y="0" source="loginBg_jpg"/>
+	<e:Group width="451" height="71" x="45" y="32" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image width="63" height="57" x="15" y="8.5" anchorOffsetX="0" anchorOffsetY="0" source="headimg_jpg"/>
+		<e:Label text="胡汉三" x="78" y="22"/>
+	</e:Group>
+</e:Skin>

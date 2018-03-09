@@ -1,8 +1,12 @@
 {
 	"groups": [
 		{
-			"keys": "bg_jpg,egret_icon_png,description_json,loginBg_jpg,eui_res_json,headimg_jpg",
+			"keys": "bg_jpg,egret_icon_png,description_json,loginBg_jpg,eui_res_json,headimg_jpg,smallloading_json,smallloading_png,tip_bg_png",
 			"name": "preload"
+		},
+		{
+			"keys": "snowParticle_png,snowParticle_json",
+			"name": "hall"
 		}
 	],
 	"resources": [
@@ -17,25 +21,50 @@
 			"name": "egret_icon_png"
 		},
 		{
-			"name": "description_json",
+			"url": "config/description.json",
 			"type": "json",
-			"url": "config/description.json"
+			"name": "description_json"
 		},
 		{
-			"name": "loginBg_jpg",
+			"url": "assets/Preload/loginBg.jpg",
 			"type": "image",
-			"url": "assets/Preload/loginBg.jpg"
+			"name": "loginBg_jpg"
 		},
 		{
-			"name": "eui_res_json",
-			"type": "sheet",
 			"url": "assets/Preload/eui_res.json",
-			"subkeys": "border_png,button_down_png,button_up_png,checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,handle_png,header_png,off_png,on_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,selected_png,thumb_png,thumb_pb_png,track_png,track_pb_png,track_sb_png,tracklight_png"
+			"type": "sheet",
+			"name": "eui_res_json",
+			"subkeys": "border_png,button_down_png,button_up_png,checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,handle_png,header_png,off_png,on_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,selected_png,thumb_pb_png,thumb_png,track_pb_png,track_png,track_sb_png,tracklight_png"
 		},
 		{
-			"name": "headimg_jpg",
+			"url": "assets/Preload/headimg.jpg",
 			"type": "image",
-			"url": "assets/Preload/headimg.jpg"
+			"name": "headimg_jpg"
+		},
+		{
+			"url": "assets/Preload/smallloading.json",
+			"type": "json",
+			"name": "smallloading_json"
+		},
+		{
+			"url": "assets/Preload/smallloading.png",
+			"type": "image",
+			"name": "smallloading_png"
+		},
+		{
+			"url": "assets/Hall/snowParticle.json",
+			"type": "json",
+			"name": "snowParticle_json"
+		},
+		{
+			"url": "assets/Hall/snowParticle.png",
+			"type": "image",
+			"name": "snowParticle_png"
+		},
+		{
+			"name": "tip_bg_png",
+			"type": "image",
+			"url": "assets/Preload/tip_bg.png"
 		}
 	]
 }

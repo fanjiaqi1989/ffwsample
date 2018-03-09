@@ -29,6 +29,18 @@
     },
     {
       "name": "dragonBones"
-    }
+    },
+    {
+      "name": "particle",
+      "path": "../outlibs"
+    },
+		{
+			"name": "Zlib",
+			"path": "../outlibs"
+		},
+		{
+			"name": "ProtoBuf",
+			"path": "../outlibs"
+		}
   ]
 }

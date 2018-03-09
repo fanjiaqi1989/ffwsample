@@ -6,13 +6,24 @@ module utils {
 
 		public static RES_LOAD_COMPLETE:string = "ffw_utils_res_load_complete";
 
-
 		private mainAssertGroups:Array<string> = [];
 		private optionalAssertGroups:Array<string> = [];
-		private callbackfuc:Function;
 
 		public constructor() {
 			super();
+
+			this.graphics.beginFill(0xffffff,1);
+			this.graphics.drawRect(0,0,ffw.ScaleTool.stageW,ffw.ScaleTool.stageH);
+			this.graphics.endFill();
+
+			var data = RES.getRes("smallloading_json");
+			var txtr = RES.getRes("smallloading_png");
+			var mcFactory:egret.MovieClipDataFactory = new egret.MovieClipDataFactory( data, txtr );
+			var mc1:egret.MovieClip = new egret.MovieClip( mcFactory.generateMovieClipData( "smallloading" ) );
+			ffw.ScaleTool.setCenterH(mc1);
+			ffw.ScaleTool.setCenterV(mc1);
+			mc1.gotoAndPlay(0,-1);
+			this.addChild(mc1);
 
 			RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
 			RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
@@ -20,10 +31,9 @@ module utils {
 			RES.addEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR, this.onItemLoadError, this);
 		}
 
-		public setLoadResGroup(mainRes:Array<string>=[],optionalRes:Array<string>=[],callback:Function=null):void{
+		public setLoadResGroup(mainRes:Array<string>=[],optionalRes:Array<string>=[]):void{
 			this.mainAssertGroups = mainRes;
 			this.optionalAssertGroups = optionalRes;
-			this.callbackfuc = callback;
 
 			if(this.mainAssertGroups.length>0){
 				RES.loadGroup(this.mainAssertGroups[0]);
@@ -74,8 +84,13 @@ module utils {
 			RES.removeEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
 			RES.removeEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
 			RES.removeEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR, this.onItemLoadError, this);
+
+			if(this.parent!=null){
+				this.parent.removeChild(this);
+			}
+
 			//发送结果
-			this.callbackfuc();
+			this.dispatchEventWith(ResLoadingView.RES_LOAD_COMPLETE);
 		}
 	}
 }

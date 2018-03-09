@@ -41,4 +41,10 @@ class AppConf {
 
 	//-------------------------------------------------//
 	public os:string = "";
+
+	public hallWebSocket_IP:string = "echo.websocket.org";
+
+	public hallWebSocket_PORT:number = 80;
+
+	
 }

@@ -16,7 +16,7 @@ class ViewManager extends egret.DisplayObjectContainer {
 	//最顶层
 	public topLayer:egret.Sprite;
 	//loading
-	public mask:utils.LoadingMask = new utils.LoadingMask();
+	public mask:utils.LoadingMask;
 	//弹出提示层
 	public popLayer:egret.Sprite;
 	//主ui层
@@ -47,9 +47,6 @@ class ViewManager extends egret.DisplayObjectContainer {
 		this.addChild(this.middleLayer);
 		this.addChild(this.popLayer);
 		this.addChild(this.topLayer);
-		// this.topLayer.addChild(this.mask);
-		// this.mask.visible = false;
-
 		this.init();
 	}
 
@@ -64,7 +61,8 @@ class ViewManager extends egret.DisplayObjectContainer {
 	 * 初始化
 	 */
 	private init():void{
-		
+		TipsUtils.topLayer = this.topLayer;
+		this.mask = new utils.LoadingMask();
 	}
 
 	private removeAllCustomerView():void{
@@ -89,5 +87,12 @@ class ViewManager extends egret.DisplayObjectContainer {
 		this.middleLayer.addChild(this.hallView);
 	}
 
-	
+	public showMask():void{
+		this.topLayer.addChild(this.mask);
+	}
+
+	public hideMask():void{
+		this.topLayer.removeChild(this.mask);
+	}
+
 }

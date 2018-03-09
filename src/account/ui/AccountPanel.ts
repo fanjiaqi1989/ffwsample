@@ -25,6 +25,21 @@ module account.ui {
 		private onClickLoginHandler(e:eui.UIEvent):void{
 			e.preventDefault();
 			console.log("切换到大厅界面");
+			var url:string = "http://www.asdfzxcv.com";
+			var params:string = "aa=1&bb=asdf&token=asdf";
+			ffw.BaseHttpRequest.sendRequestPostOnce(url,this.onLoginReqSuccessHandler,this.onLoginReqErrorHandler,this);
+			
+		}
+
+		private onLoginReqSuccessHandler(e:egret.Event):void{
+			var data = (e.target as egret.URLLoader).data;
+			TipsUtils.showTipsDownToUp("login success");
+			ViewManager.ins.showHallView();
+		}
+
+		private onLoginReqErrorHandler(e:egret.Event):void{
+			var data = (e.target as egret.URLLoader)._status;
+			TipsUtils.showTipsDownToUp("login error");
 			ViewManager.ins.showHallView();
 		}
 	}

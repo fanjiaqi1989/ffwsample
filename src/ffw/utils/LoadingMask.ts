@@ -52,6 +52,8 @@ module utils {
             {
                 var shape:egret.Shape = this.arr[i] as egret.Shape;
                 shape.alpha = this.j;
+                shape.scaleX = this.j;
+                shape.scaleY = this.j;
                 this.j -=  this.seg;
                 if ((this.j < 0.1))
                 {

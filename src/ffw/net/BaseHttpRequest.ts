@@ -21,7 +21,7 @@ export class BaseHttpRequest extends egret.EventDispatcher {
         // this.urlloader.dataFormat = egret.URLLoaderDataFormat.VARIABLES;
         urlreq.method = egret.URLRequestMethod.GET;
         urlloader.addEventListener(egret.Event.COMPLETE,succFunction,thisobj);
-        urlloader.addEventListener(egret.IOErrorEvent.IO_ERROR, onLoadError, this);
+        urlloader.addEventListener(egret.IOErrorEvent.IO_ERROR, onLoadError, thisobj);
         if(params!=""){
             urlreq.data = new egret.URLVariables(params);
         }
@@ -51,7 +51,7 @@ export class BaseHttpRequest extends egret.EventDispatcher {
         urlreq.method = egret.URLRequestMethod.POST;
         
         urlloader.addEventListener(egret.Event.COMPLETE,succFunction,thisobj);
-        urlloader.addEventListener(egret.IOErrorEvent.IO_ERROR, onLoadError, this);
+        urlloader.addEventListener(egret.IOErrorEvent.IO_ERROR, onLoadError, thisobj);
         if(params!=""){
 
             if(paramstype=="URLVar"){

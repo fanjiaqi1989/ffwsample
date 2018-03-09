@@ -6,4 +6,7 @@
 		<e:Image width="63" height="57" x="15" y="8.5" anchorOffsetX="0" anchorOffsetY="0" source="headimg_jpg"/>
 		<e:Label text="胡汉三" x="78" y="22"/>
 	</e:Group>
+	<e:Button id="return_btn" label="return" x="987" y="40.5"/>
+	<e:TextInput id="msg_txt" width="366" height="40" x="60" y="150" anchorOffsetX="0" anchorOffsetY="0"/>
+	<e:Button id="send_btn" label="send" x="449" y="146"/>
 </e:Skin>

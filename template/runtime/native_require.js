@@ -14,7 +14,7 @@ var game_file_list = [
 	"libs/modules/Zlib/Zlib.js",
 	"libs/modules/ProtoBuf/ProtoBuf.js",
 	"polyfill/promise.js",
-	"bin-debug/ffw/utils/ResLoadingView.js",
+	"bin-debug/ffw/utils/UtilsClass/BitmapBlink.js",
 	"bin-debug/account/AccountData.js",
 	"bin-debug/account/ui/AccountPanel.js",
 	"bin-debug/AppConf.js",
@@ -29,9 +29,9 @@ var game_file_list = [
 	"bin-debug/ffw/utils/md5.js",
 	"bin-debug/ffw/utils/PopUpManager.js",
 	"bin-debug/ffw/utils/RegUtils.js",
-	"bin-debug/account/AccountView.js",
+	"bin-debug/ffw/utils/ResLoadingView.js",
 	"bin-debug/ffw/utils/ScaleTool.js",
-	"bin-debug/ffw/utils/UtilsClass/BitmapBlink.js",
+	"bin-debug/account/AccountView.js",
 	"bin-debug/ffw/utils/UtilsClass/TipsUtils.js",
 	"bin-debug/game/GameView.js",
 	"bin-debug/hall/HallView.js",
@@ -45,6 +45,10 @@ var game_file_list = [
 	"bin-debug/Main.js",
 	"bin-debug/ThemeAdapter.js",
 	"bin-debug/ViewManager.js",
+	"bin-debug/tools/libssrc/particle/src/GravityParticle.js",
+	"bin-debug/tools/libssrc/particle/src/GravityParticleSystem.js",
+	"bin-debug/tools/libssrc/particle/src/Particle.js",
+	"bin-debug/tools/libssrc/particle/src/ParticleSystem.js",
 	//----auto game_file_list end----
 ];
 

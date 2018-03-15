@@ -22,7 +22,7 @@ module hall {
 		}
 
 		private RemoveFromStageHandler(e:egret.Event):void{
-
+			net.HallWebSocket.ins.CloseSocket();
 		}
 
 		private onResLoadingCompleteHandler(e:egret.Event):void{

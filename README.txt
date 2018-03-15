@@ -9,6 +9,9 @@ this is a egret framework sample project.
     添加mc loading动画示例
     添加粒子效果示例，看样子效率不是很高
 
+    视图层的个界面管理原则：addToStage 和 removeFromStage
+    
+
 2.消息规范
     ffw.Msg.ins.disp
     该类定义了全局消息通信。小型项目使用该方法。
@@ -20,3 +23,4 @@ this is a egret framework sample project.
     添加HttpRequest示例。
     
 5.其他
+如果使用eui则 已经进行了 mvc中 view和controller的分离，所以可精简开发。

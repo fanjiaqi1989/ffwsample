@@ -24,3 +24,10 @@ this is a egret framework sample project.
     
 5.其他
 如果使用eui则 已经进行了 mvc中 view和controller的分离，所以可精简开发。
+
+egret 性能点
+1.带动画的组件不使用需移除舞台。
+2.addChild 和 removeChile次数过多会有性能问题。
+3.自带的tween性能也不太高
+4.遮罩存在性能问题（使用scroller的viewport做裁剪，把组件放入其中，关闭横竖滚动）
+5.多对象需要内存池处理

@@ -1,11 +1,15 @@
 module hall {
 	export class HallView extends egret.DisplayObjectContainer {
-
+		//res loading
 		private resLoadingView:utils.ResLoadingView;
 
+		//ui
 		private hallPanel:hall.ui.HallPanel;
 
+		//components
 		private system:particle.GravityParticleSystem;
+
+
 
 		public constructor() {
 			super();
@@ -45,6 +49,7 @@ module hall {
 
 			//websocket
 			ffw.Msg.ins.addEventListener(net.HallWebSocket.ON_SOCKET_OPEN,this.onSocketOpenHandler,this);
+			ffw.Msg.ins.addEventListener(HallMessage.RECIEVE_UTF_MESSAGE,this.RECIEVE_UTF_MESSAGE,this);
 			net.HallWebSocket.ins.connectSocket();
 
 		}
@@ -59,6 +64,11 @@ module hall {
 		/**socket 连接 */
 		private onSocketOpenHandler(e:egret.Event):void{
 			
+		}
+		/**收到服务器返回的消息 */
+		private RECIEVE_UTF_MESSAGE(e:egret.Event):void{
+			var msg:string = e.data;
+			this.hallPanel.addLabelScrollerText(msg);
 		}
 
 		

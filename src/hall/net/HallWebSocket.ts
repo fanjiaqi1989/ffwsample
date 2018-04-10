@@ -41,7 +41,7 @@ module hall.net {
 		
 		public constructor() {
 			// this.pbfac = new commons.PbFactory("appprotobuf_txt");
-			this.senderHandler = new HallSocketSendHandler();
+			this.senderHandler = new HallSocketSendHandler(this);
 			this.recevieHandler = new HallSocketReceiveHandler();
 			//心跳计数器
 			this.heartBeatTimer = new egret.Timer(1000*10,0);
@@ -92,7 +92,8 @@ module hall.net {
 			// byte.endian = egret.Endian.LITTLE_ENDIAN;
 			// this.sock.readBytes(byte);
 			// this.recevieHandler.onDataPackReceive(msg.body, msg.id, msg.result);
-			var msg = this.sock.readUTF();    
+			var msg = this.sock.readUTF();
+			this.recevieHandler.onMsgReceive(msg);
     		console.log("收到数据：" + msg);
 		}
 

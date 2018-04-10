@@ -1,25 +1,19 @@
 {
 	"groups": [
 		{
-			"keys": "bg_jpg,egret_icon_png,description_json,loginBg_jpg,eui_res_json,headimg_jpg,smallloading_json,smallloading_png,tip_bg_png",
+			"keys": "loginBg_jpg,eui_res_json,smallloading_json,smallloading_png,tip_bg_png",
 			"name": "preload"
 		},
 		{
-			"keys": "snowParticle_png,snowParticle_json",
+			"keys": "snowParticle_png,snowParticle_json,description_json",
 			"name": "hall"
+		},
+		{
+			"keys": "headimg_jpg",
+			"name": "account"
 		}
 	],
 	"resources": [
-		{
-			"url": "assets/bg.jpg",
-			"type": "image",
-			"name": "bg_jpg"
-		},
-		{
-			"url": "assets/egret_icon.png",
-			"type": "image",
-			"name": "egret_icon_png"
-		},
 		{
 			"url": "config/description.json",
 			"type": "json",
@@ -35,11 +29,6 @@
 			"type": "sheet",
 			"name": "eui_res_json",
 			"subkeys": "border_png,button_down_png,button_up_png,checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,handle_png,header_png,off_png,on_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,selected_png,thumb_pb_png,thumb_png,track_pb_png,track_png,track_sb_png,tracklight_png"
-		},
-		{
-			"url": "assets/Preload/headimg.jpg",
-			"type": "image",
-			"name": "headimg_jpg"
 		},
 		{
 			"url": "assets/Preload/smallloading.json",
@@ -62,9 +51,14 @@
 			"name": "snowParticle_png"
 		},
 		{
-			"name": "tip_bg_png",
+			"url": "assets/Preload/tip_bg.png",
 			"type": "image",
-			"url": "assets/Preload/tip_bg.png"
+			"name": "tip_bg_png"
+		},
+		{
+			"url": "assets/Account/headimg.jpg",
+			"type": "image",
+			"name": "headimg_jpg"
 		}
 	]
 }

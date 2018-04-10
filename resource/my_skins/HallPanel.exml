@@ -9,4 +9,10 @@
 	<e:Button id="return_btn" label="return" x="987" y="40.5"/>
 	<e:TextInput id="msg_txt" width="366" height="40" x="60" y="150" anchorOffsetX="0" anchorOffsetY="0"/>
 	<e:Button id="send_btn" label="send" x="449" y="146"/>
+	<e:Scroller id="chatScroller" width="360" height="200" x="63" y="220" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Group anchorOffsetX="0" width="360" height="200">
+			<e:Label id="chatLabel" text="123" x="0" y="0" width="360" backgroundColor="0xffffff" background="false" textColor="0x000000" multiline="true" size="18"/>
+		</e:Group>
+	</e:Scroller>
+	<e:Button id="loadconf_btn" label="load_conf" x="450" y="214"/>
 </e:Skin>

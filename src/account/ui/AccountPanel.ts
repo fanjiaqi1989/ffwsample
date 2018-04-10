@@ -24,7 +24,9 @@ module account.ui {
 
 		private onClickLoginHandler(e:eui.UIEvent):void{
 			e.preventDefault();
+			ViewManager.ins.showHallView();
 			console.log("切换到大厅界面");
+			return;
 			var url:string = "http://www.asdfzxcv.com";
 			var params:string = "aa=1&bb=asdf&token=asdf";
 			ffw.BaseHttpRequest.sendRequestPostOnce(url,this.onLoginReqSuccessHandler,this.onLoginReqErrorHandler,this);

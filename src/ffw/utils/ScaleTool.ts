@@ -36,7 +36,6 @@ export class ScaleTool {
         if(miny>dis.y){
             dis.y = miny;
         }
-
     }
 
     /**
@@ -53,6 +52,6 @@ export class ScaleTool {
         dis.x = ffw.ScaleTool.stageW-dis.width+offset;
     }
 
-}
+    }
 
 }

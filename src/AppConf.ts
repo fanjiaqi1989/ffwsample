@@ -29,7 +29,7 @@ class AppConf {
 				AppConf._ins.version+="(debug)";
 			break;
 			case 1:
-				AppConf._ins.version+="(debug)";
+				AppConf._ins.version+="(test)";
 			break;
 			case 2:
 				AppConf._ins.version+="";

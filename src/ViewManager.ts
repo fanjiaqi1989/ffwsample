@@ -15,11 +15,11 @@ class ViewManager extends egret.DisplayObjectContainer {
 	//---------------------------------------system---------------------------------//
 	//最顶层
 	public topLayer:egret.Sprite;
-	//loading
+	//loading app层级的遮罩层 谨慎使用
 	public mask:utils.LoadingMask;
-	//弹出提示层
+	//弹出提示层 app层级的遮罩层 谨慎使用
 	public popLayer:egret.Sprite;
-	//主ui层
+	//主ui层 此层只会放用户开发的模块 清除的时候全部删除
 	private middleLayer:egret.Sprite;
 	//背景层
 	private bottomLayer:egret.Sprite;

@@ -6,7 +6,7 @@ class AppConf {
 	 * 1 test
 	 * 2 release
 	 */
-	public static appType:number = 0;
+	public static appType:number = 1;
 
 	public version:string = "V2.4.10";
 
@@ -27,9 +27,13 @@ class AppConf {
 		switch(apptype){
 			case 0:
 				AppConf._ins.version+="(debug)";
+				this.hallWebSocket_IP = "192.168.1.103";
+				this.hallWebSocket_PORT = 3030;
 			break;
 			case 1:
 				AppConf._ins.version+="(test)";
+				this.hallWebSocket_IP = "echo.websocket.org";
+				this.hallWebSocket_PORT = 80;
 			break;
 			case 2:
 				AppConf._ins.version+="";

@@ -14,7 +14,8 @@
     "eui.VSlider": "resource/eui_skins/VSliderSkin.exml",
     "eui.ItemRenderer": "resource/eui_skins/ItemRendererSkin.exml",
     "account.ui.AccountPanel": "resource/my_skins/AccountPanel.exml",
-    "hall.ui.HallPanel": "resource/my_skins/HallPanel.exml"
+    "hall.ui.HallPanel": "resource/my_skins/HallPanel.exml",
+    "game.ui.GamePanel": "resource/my_skins/GamePanel.exml"
   },
   "autoGenerateExmlsList": true,
   "exmls": [
@@ -32,6 +33,7 @@
     "resource/eui_skins/VScrollBarSkin.exml",
     "resource/eui_skins/VSliderSkin.exml",
     "resource/my_skins/AccountPanel.exml",
+    "resource/my_skins/GamePanel.exml",
     "resource/my_skins/HallPanel.exml"
   ]
 }

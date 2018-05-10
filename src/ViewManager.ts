@@ -87,6 +87,14 @@ class ViewManager extends egret.DisplayObjectContainer {
 		this.middleLayer.addChild(this.hallView);
 	}
 
+	public showGameView():void{
+		this.removeAllCustomerView();
+		if(this.gameView == null){
+			this.gameView = new game.GameView();
+		}
+		this.middleLayer.addChild(this.gameView);
+	}
+
 	public showMask():void{
 		this.topLayer.addChild(this.mask);
 	}

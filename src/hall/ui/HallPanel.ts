@@ -2,6 +2,7 @@ module hall.ui {
 	export class HallPanel extends eui.Component implements eui.UIComponent{
 		//返回到登陆界面
 		private return_btn:eui.Button;
+		private entergame_btn:eui.Button;
 		//发送socket聊天
 		private send_btn:eui.Button;
 		private msg_txt:eui.TextInput;
@@ -28,12 +29,17 @@ module hall.ui {
 			super.childrenCreated();
 
 			this.return_btn.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onClickReturnBtnHandler,this);
+			this.entergame_btn.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onClickEnterGameBtnHandler,this);
 			this.send_btn.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onClickSendBtnHandler,this);
 			this.loadconf_btn.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onClickLoadConfBtnHandler,this);
 		}
 
 		private onClickReturnBtnHandler(e:egret.TouchEvent):void{
 			ViewManager.ins.showAccountView();
+		}
+
+		private onClickEnterGameBtnHandler(e:egret.TouchEvent):void{
+			ViewManager.ins.showGameView();
 		}
 
 		private onClickSendBtnHandler(e:egret.TouchEvent):void{

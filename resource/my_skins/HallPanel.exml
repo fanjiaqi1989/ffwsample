@@ -15,4 +15,5 @@
 		</e:Group>
 	</e:Scroller>
 	<e:Button id="loadconf_btn" label="load_conf" x="450" y="214"/>
+	<e:Button id="entergame_btn" label="Game" x="987" y="120"/>
 </e:Skin>

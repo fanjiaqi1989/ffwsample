@@ -20,6 +20,31 @@ module account.ui {
 			this.login_panel.titleDisplay.text = "登陆面板";
 			this.login_panel.closeButton.label = "登陆";
 			this.login_panel.addEventListener(eui.UIEvent.CLOSING,this.onClickLoginHandler,this);
+
+			var str:string = "08 02 10 02";
+			var strarr:Array<string> = str.split(' ');
+			var msgBB: egret.ByteArray = new egret.ByteArray();
+
+			for(var i=0;i<strarr.length;i++){
+				var num:number = parseInt("0x"+strarr[i]);
+				msgBB.writeByte(num);
+			}
+
+			msgBB.position = 0;
+
+			var bytes = msgBB.buffer;
+			
+			var view: Uint8Array = new Uint8Array(msgBB.buffer);
+            var log: string = "";
+            for(var i: number = 0;i < view.length;i++) {
+                var t: string = view[i].toString(16);
+                if(t.length == 1) { 
+                    t = "0" + t;
+                }
+                log+= t+" ";
+            }
+            console.log(log);
+
 		}
 
 		private onClickLoginHandler(e:eui.UIEvent):void{

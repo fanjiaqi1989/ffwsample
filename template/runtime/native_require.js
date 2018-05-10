@@ -34,6 +34,7 @@ var game_file_list = [
 	"bin-debug/ffw/utils/UtilsClass/BitmapBlink.js",
 	"bin-debug/ffw/utils/UtilsClass/TipsUtils.js",
 	"bin-debug/game/GameView.js",
+	"bin-debug/game/ui/GamePanel.js",
 	"bin-debug/hall/HallMessage.js",
 	"bin-debug/hall/HallView.js",
 	"bin-debug/hall/HallViewData.js",

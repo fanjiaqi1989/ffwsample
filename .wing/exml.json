@@ -8,5 +8,10 @@
         "path": "hall\\ui\\HallPanel.ts",
         "class": "HallPanel",
         "parentPath": ""
+    },
+    "162e0c0646f": {
+        "path": "game\\ui\\GamePanel.ts",
+        "class": "GamePanel",
+        "parentPath": ""
     }
 }

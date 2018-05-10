@@ -58,11 +58,10 @@ export class BaseHttpRequest extends egret.EventDispatcher {
                 urlreq.data = new egret.URLVariables(params);
             }else if(paramstype=="JSON"){
                 // var urlvar:egret.URLVariables = new egret.URLVariables(params);
-                urlreq.data = params;//JSON.stringify(urlvar.variables);
+                urlreq.data = params;//JSON.stringify(urlvar.variables);\
                 console.info("urlreq data:"+urlreq.data);
             }
 
-            
         }
         urlreq.url = type;
         console.info("发送请求(post once):"+urlreq.url);

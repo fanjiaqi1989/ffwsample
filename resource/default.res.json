@@ -11,6 +11,10 @@
 		{
 			"keys": "headimg_jpg",
 			"name": "account"
+		},
+		{
+			"keys": "club_1_png,card_bg_png",
+			"name": "game"
 		}
 	],
 	"resources": [
@@ -59,6 +63,16 @@
 			"url": "assets/Account/headimg.jpg",
 			"type": "image",
 			"name": "headimg_jpg"
+		},
+		{
+			"url": "assets/Game/card_bg.png",
+			"type": "image",
+			"name": "card_bg_png"
+		},
+		{
+			"url": "assets/Game/club_1.png",
+			"type": "image",
+			"name": "club_1_png"
 		}
 	]
 }

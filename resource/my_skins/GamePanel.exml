@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GamePanelSkin" width="1136" height="640" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="162e0c0646f" ></w:Config>
+	<e:Rect width="100%" height="100%" x="0" y="0" fillColor="0x70ad8e"/>
+	<e:Button id="return_btn" label="return" x="986" y="32"/>
+	<e:Group width="369.7" height="237.88" x="732" y="135" anchorOffsetX="0" anchorOffsetY="0">
+		<e:HSlider id="sl_a" width="316.97" height="30.61" x="30.97" y="36.18" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:HSlider id="sl_b" width="316.97" height="30.61" x="40.97" y="46.18" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:HSlider id="sl_c" width="316.97" height="30.61" x="50.97" y="56.18" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:HSlider id="sl_d" width="316.97" height="30.61" x="60.97" y="66.18" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:HSlider id="sl_tx" width="316.97" height="30.61" x="70.97" y="76.18" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:HSlider id="sl_ty" width="316.97" height="30.61" x="80.97" y="86.18" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:layout>
+			<e:VerticalLayout/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

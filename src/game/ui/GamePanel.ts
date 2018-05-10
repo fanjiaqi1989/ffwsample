@@ -47,11 +47,11 @@ module game.ui {
 			var arr = tt.getPixels(0,0,tt.textureWidth,50);
 			
 
-			for(var  i=0;i<arr.length;i=i+4){
-				var str:string = "0x"+arr[i].toString(16)+arr[i+1].toString(16)+arr[i+2].toString(16);
-				console.log("color:"+str);
-				console.log("number:"+Number(str));
-			}
+			// for(var  i=0;i<arr.length;i=i+4){
+			// 	var str:string = "0x"+arr[i].toString(16)+arr[i+1].toString(16)+arr[i+2].toString(16);
+			// 	console.log("color:"+str);
+			// 	console.log("number:"+Number(str));
+			// }
 			// var newbtmp:egret.Bitmap = new egret.Bitmap();
 			// var newbmd:egret.BitmapData = new egret.BitmapData(arr);
 			// newbtmp.bitmapData = newbmd;
@@ -60,7 +60,7 @@ module game.ui {
 
 			// var spr:egret.Shape = new egret.Shape();
 			// spr.graphics
-			console.log("over"+arr[0].toFixed(16));
+			// console.log("over"+arr[0].toFixed(16));
 		}
 
 		private clickReturnBtnHandler(e:egret.TouchEvent):void{

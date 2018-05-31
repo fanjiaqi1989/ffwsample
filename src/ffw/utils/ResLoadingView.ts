@@ -16,19 +16,53 @@ module utils {
 			this.graphics.drawRect(0,0,ffw.ScaleTool.stageW,ffw.ScaleTool.stageH);
 			this.graphics.endFill();
 
-			var data = RES.getRes("smallloading_json");
-			var txtr = RES.getRes("smallloading_png");
-			var mcFactory:egret.MovieClipDataFactory = new egret.MovieClipDataFactory( data, txtr );
-			var mc1:egret.MovieClip = new egret.MovieClip( mcFactory.generateMovieClipData( "smallloading" ) );
-			ffw.ScaleTool.setCenterH(mc1);
-			ffw.ScaleTool.setCenterV(mc1);
-			mc1.gotoAndPlay(0,-1);
-			this.addChild(mc1);
+			// var data = RES.getRes("smallloading_json");
+			// var txtr = RES.getRes("smallloading_png");
+			// var mcFactory:egret.MovieClipDataFactory = new egret.MovieClipDataFactory( data, txtr );
+			// var mc1:egret.MovieClip = new egret.MovieClip( mcFactory.generateMovieClipData( "smallloading" ) );
+			// ffw.ScaleTool.setCenterH(mc1);
+			// ffw.ScaleTool.setCenterV(mc1);
+			// mc1.gotoAndPlay(0,-1);
+			// this.addChild(mc1);
+
+			this.showAnimation();
 
 			RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
 			RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
 			RES.addEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
 			RES.addEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR, this.onItemLoadError, this);
+		}
+
+		private aniShape:egret.Shape;
+
+		private showAnimation():void{
+			var radius:number = 50;
+			var p1:number = radius/1.414;
+
+			this.aniShape = new egret.Shape();
+			var shape:egret.Shape = this.aniShape;
+			shape.graphics.beginFill(0xffffff,1);
+
+			shape.graphics.drawCircle(0,-radius,10);
+			shape.graphics.drawCircle(p1,-p1,10);
+			shape.graphics.drawCircle(radius,0,10);
+			shape.graphics.drawCircle(p1,p1,10);
+
+			shape.graphics.beginFill(0xffffff,0.8);
+			shape.graphics.drawCircle(0,radius,10);
+			shape.graphics.beginFill(0xffffff,0.6);
+			shape.graphics.drawCircle(-p1,p1,10);
+			shape.graphics.beginFill(0xffffff,0.4);
+			shape.graphics.drawCircle(-radius,0,10);
+			shape.graphics.beginFill(0xffffff,0.2);
+			shape.graphics.drawCircle(-p1,-p1,10);
+			shape.graphics.endFill();
+
+			shape.x = ffw.ScaleTool.stageW/2;
+			shape.y = ffw.ScaleTool.stageH/2;
+			shape.cacheAsBitmap = true;
+			this.addChild(shape);
+			egret.Tween.get(shape,{loop:true}).to({rotation:-360},2000);
 		}
 
 		public setLoadResGroup(mainRes:Array<string>=[],optionalRes:Array<string>=[]):void{
@@ -87,6 +121,11 @@ module utils {
 
 			if(this.parent!=null){
 				this.parent.removeChild(this);
+			}
+
+			if(this.aniShape!=null){
+				egret.Tween.removeTweens(this.aniShape);
+				this.aniShape = null;
 			}
 
 			//发送结果

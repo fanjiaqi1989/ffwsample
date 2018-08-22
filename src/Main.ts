@@ -142,6 +142,10 @@ class Main extends eui.UILayer {
         this.addChild(ViewManager.ins);
         ViewManager.ins.showAccountView();
 
+        //test
+        let b = new testcase.BClass();
+
+        b.name;
     }
 
 }

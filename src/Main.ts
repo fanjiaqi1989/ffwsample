@@ -138,14 +138,20 @@ class Main extends eui.UILayer {
 
         AppConf.ins.os = egret.Capabilities.os;
 
+        //初始化框架
+        ffw.FFW.ins.onInit(this.stage);
+
+        ffw.ViewManager.ins.registView("accountView",new account.AccountView());
+        ffw.ViewManager.ins.showView("accountView");
+
         //4.视图层初始化
-        this.addChild(ViewManager.ins);
-        ViewManager.ins.showAccountView();
+        // ffw.display.ScenceManager.ins.addScence("accountView",account.AccountView);
+        // ffw.display.ScenceManager.ins.showScence("accountView");
 
         //test
         let b = new testcase.BClass();
-
         b.name;
+
     }
 
 }

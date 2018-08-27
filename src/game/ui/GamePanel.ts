@@ -64,7 +64,7 @@ module game.ui {
 		}
 
 		private clickReturnBtnHandler(e:egret.TouchEvent):void{
-			ViewManager.ins.showHallView();
+			// ViewManager.ins.showHallView();
 		}
 	}
 }

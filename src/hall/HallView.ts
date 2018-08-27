@@ -48,8 +48,8 @@ module hall {
 			this.addChild(this.system);
 
 			//websocket
-			ffw.Msg.ins.addEventListener(net.HallWebSocket.ON_SOCKET_OPEN,this.onSocketOpenHandler,this);
-			ffw.Msg.ins.addEventListener(HallMessage.RECIEVE_UTF_MESSAGE,this.RECIEVE_UTF_MESSAGE,this);
+			// ffw.Msg.ins.addEventListener(net.HallWebSocket.ON_SOCKET_OPEN,this.onSocketOpenHandler,this);
+			// ffw.Msg.ins.addEventListener(HallMessage.RECIEVE_UTF_MESSAGE,this.RECIEVE_UTF_MESSAGE,this);
 			net.HallWebSocket.ins.connectSocket();
 
 		}

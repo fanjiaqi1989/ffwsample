@@ -49,7 +49,7 @@ module account.ui {
 
 		private onClickLoginHandler(e:eui.UIEvent):void{
 			e.preventDefault();
-			ViewManager.ins.showHallView();
+			// ffw.ViewManager.ins.showHallView();
 			console.log("切换到大厅界面");
 			return;
 			var url:string = "http://www.asdfzxcv.com";
@@ -61,13 +61,13 @@ module account.ui {
 		private onLoginReqSuccessHandler(e:egret.Event):void{
 			var data = (e.target as egret.URLLoader).data;
 			TipsUtils.showTipsDownToUp("login success");
-			ViewManager.ins.showHallView();
+			// ViewManager.ins.showHallView();
 		}
 
 		private onLoginReqErrorHandler(e:egret.Event):void{
 			var data = (e.target as egret.URLLoader)._status;
 			TipsUtils.showTipsDownToUp("login error");
-			ViewManager.ins.showHallView();
+			// ViewManager.ins.showHallView();
 		}
 	}
 }

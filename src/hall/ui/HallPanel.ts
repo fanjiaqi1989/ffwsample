@@ -35,11 +35,11 @@ module hall.ui {
 		}
 
 		private onClickReturnBtnHandler(e:egret.TouchEvent):void{
-			ViewManager.ins.showAccountView();
+			// ViewManager.ins.showAccountView();
 		}
 
 		private onClickEnterGameBtnHandler(e:egret.TouchEvent):void{
-			ViewManager.ins.showGameView();
+			// ViewManager.ins.showGameView();
 		}
 
 		private onClickSendBtnHandler(e:egret.TouchEvent):void{

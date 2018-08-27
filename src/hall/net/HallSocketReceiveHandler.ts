@@ -1,9 +1,8 @@
 module hall.net {
-	export class HallSocketReceiveHandler {
+	export class HallSocketReceiveHandler{
 
 
 		public constructor() {
-			
 		}
 
 		public onMsgReceive(msg:string):void{

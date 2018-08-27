@@ -8,7 +8,7 @@ module hall.net {
 	 * 
 	 * 当游戏结束，view曾通知socket层关闭连接，并不必进行断线重连。
 	 */
-	export class HallWebSocket {
+	export class HallWebSocket{
 
 		public static ON_SOCKET_OPEN:string = "HallWebSocket_ON_SOCKET_OPEN";
 		public static ON_SOCKET_CLOSE:string = "HallWebSocket_ON_SOCKET_CLOSE";

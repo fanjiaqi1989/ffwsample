@@ -13,6 +13,7 @@ export class ViewManager extends egret.DisplayObjectContainer {
 	 * 后续拓展 GameView2、GameView3、……
 	 */
 	private static _ins:ViewManager;
+	public tipUtilsLayer:egret.DisplayObjectContainer;
 	//---------------------------------------system---------------------------------//
 	//最顶层
 	public topLayer:egret.DisplayObjectContainer;
@@ -31,9 +32,14 @@ export class ViewManager extends egret.DisplayObjectContainer {
 		this.bottomLayer = new egret.DisplayObjectContainer();
 		this.middleLayer = new egret.DisplayObjectContainer();
 		this.topLayer = new egret.DisplayObjectContainer();
+
+		this.tipUtilsLayer = new egret.DisplayObjectContainer();
 		this.addChild(this.bottomLayer);
 		this.addChild(this.middleLayer);
 		this.addChild(this.topLayer);
+
+		this.addChild(this.tipUtilsLayer);
+		TipsUtils.tipUtilsLayer = this.tipUtilsLayer;
 	}
 
 	registView(name:string,v:IView):void{
@@ -48,7 +54,7 @@ export class ViewManager extends egret.DisplayObjectContainer {
 		for(let v in this.viewList){
 			if(v == name){
 				this.middleLayer.addChild(this.viewList[v]);
-				this.viewList[v].onInitView();
+				this.viewList[v].onLoadRes();
 			}else{
 				if(this.viewList[v].parent){
 					this.viewList[v].parent.removeChild(this.viewList[v]);

@@ -9,7 +9,7 @@
 module TipsUtils {
 
         //全局字体颜色表--可以扩展
-    export var TextColors = {
+    export let TextColors = {
         white:0xFFFFFF,//白色
         milkWhite:0xfbf1af,//乳白色 
         grayWhite:0xceb6a2,//灰白色
@@ -26,11 +26,11 @@ module TipsUtils {
         golden:0xFFD700 //金色
     }
 
-    export var topLayer;
+    export let tipUtilsLayer;
 
     //从下到上弹出
     export function showTipsDownToUp(str:string = "",isWarning:boolean = false):void{
-        var effectTips = new egret.TextField();
+        let effectTips = new egret.TextField();
         effectTips.size = 30;
         effectTips.y = ffw.ScaleTool.stageH - 30;
         if(isWarning){
@@ -47,7 +47,7 @@ module TipsUtils {
         // effectTips.bold = true;
         effectTips.textAlign = egret.HorizontalAlign.CENTER;
 
-        var tip_bg = new egret.Bitmap(RES.getRes("tip_bg_png"));
+        let tip_bg = new egret.Bitmap(RES.getRes("tip_bg_png"));
         tip_bg.scale9Grid = new egret.Rectangle(20, 15, 280, 60);
         tip_bg.width = effectTips.width + 40;
         tip_bg.height = 80;
@@ -55,25 +55,25 @@ module TipsUtils {
         tip_bg.x = ffw.ScaleTool.stageW/2 - tip_bg.width/2;
         tip_bg.alpha = 0;
 
-        topLayer.removeChildren();
-        if(!topLayer.contains(tip_bg)){
-            topLayer.addChild( tip_bg );
+        tipUtilsLayer.removeChildren();
+        if(!tipUtilsLayer.contains(tip_bg)){
+            tipUtilsLayer.addChild( tip_bg );
         }  
-        if(!topLayer.contains(effectTips)){
-            topLayer.addChild( effectTips );
+        if(!tipUtilsLayer.contains(effectTips)){
+            tipUtilsLayer.addChild( effectTips );
         }        
 
-        var onComplete2:Function = function(){
-            if(topLayer.contains(tip_bg)){
-                topLayer.removeChild( tip_bg );
+        let onComplete2:Function = function(){
+            if(tipUtilsLayer.contains(tip_bg)){
+                tipUtilsLayer.removeChild( tip_bg );
                 tip_bg = null;
             }
-            if(topLayer.contains(effectTips)){
-                topLayer.removeChild( effectTips );
+            if(tipUtilsLayer.contains(effectTips)){
+                tipUtilsLayer.removeChild( effectTips );
                 effectTips = null;
             }
         };
-        var onComplete1:Function = function(){
+        let onComplete1:Function = function(){
             egret.Tween.get(tip_bg).to({alpha:0},500);
             egret.Tween.get(effectTips).to({alpha:0},500).call(onComplete2,this);
         };
@@ -85,7 +85,7 @@ module TipsUtils {
 
     //从左至右 或者 从右至左
     export function showTipsLeftOrRight(str:string = "",isWarning:boolean = false,isFromeLeft:boolean = true):void{
-        var effectTips = new egret.TextField();
+        let effectTips = new egret.TextField();
 
         effectTips.size = 24;
         effectTips.y = ffw.ScaleTool.stageH/2;
@@ -107,8 +107,8 @@ module TipsUtils {
         effectTips.bold = true;
         effectTips.textAlign = egret.HorizontalAlign.CENTER;
 
-        if(!topLayer.contains(effectTips)){
-            topLayer.addChild( effectTips );
+        if(!tipUtilsLayer.contains(effectTips)){
+            tipUtilsLayer.addChild( effectTips );
         }        
 
         if(isFromeLeft){
@@ -134,8 +134,8 @@ module TipsUtils {
         }, this, 800);  
 
         egret.setTimeout(function () {
-            if(topLayer.contains(effectTips)){
-                topLayer.removeChild( effectTips );
+            if(tipUtilsLayer.contains(effectTips)){
+                tipUtilsLayer.removeChild( effectTips );
                 effectTips = null;
             }
         }, this, 1100);     
@@ -144,7 +144,7 @@ module TipsUtils {
 
     //从里到外
     export function showTipsFromCenter(str:string = "",isWarning:boolean = false):void{
-        var tip_bg = new egret.Bitmap(RES.getRes("tip_bg_png"));
+        let tip_bg = new egret.Bitmap(RES.getRes("tip_bg_png"));
         tip_bg.anchorOffsetX = tip_bg.width/2;
         tip_bg.anchorOffsetY = tip_bg.height/2;
         tip_bg.y = ffw.ScaleTool.stageH/2;
@@ -153,7 +153,7 @@ module TipsUtils {
         tip_bg.scaleY = 0;
         tip_bg.alpha = 0;
 
-        var effectTips = new egret.TextField();
+        let effectTips = new egret.TextField();
 
         effectTips.size = 30;
         effectTips.y = ffw.ScaleTool.stageH/2;
@@ -176,20 +176,20 @@ module TipsUtils {
         effectTips.scaleX = 0;
         effectTips.scaleY = 0;
 
-        if(!topLayer.contains(tip_bg)){
-            topLayer.addChild( tip_bg );
+        if(!tipUtilsLayer.contains(tip_bg)){
+            tipUtilsLayer.addChild( tip_bg );
         }  
-        if(!topLayer.contains(effectTips)){
-            topLayer.addChild( effectTips );
+        if(!tipUtilsLayer.contains(effectTips)){
+            tipUtilsLayer.addChild( effectTips );
         }        
 
-        var onComplete2:Function = function(){
-            if(topLayer.contains(tip_bg)){
-                topLayer.removeChild( tip_bg );
+        let onComplete2:Function = function(){
+            if(tipUtilsLayer.contains(tip_bg)){
+                tipUtilsLayer.removeChild( tip_bg );
                 tip_bg = null;
             }
-            if(topLayer.contains(effectTips)){
-                topLayer.removeChild( effectTips );
+            if(tipUtilsLayer.contains(effectTips)){
+                tipUtilsLayer.removeChild( effectTips );
                 effectTips = null;
             }
         };
@@ -204,7 +204,7 @@ module TipsUtils {
 
     //从外到里
     export function showTipsBigToSmall(str:string = "",isWarning:boolean = false):void{
-        var effectTips = new egret.TextField();
+        let effectTips = new egret.TextField();
 
         effectTips.size = 24;
         effectTips.y = ffw.ScaleTool.stageH/2;
@@ -226,13 +226,13 @@ module TipsUtils {
         effectTips.scaleX = 4;
         effectTips.scaleY = 4;
 
-        if(!topLayer.contains(effectTips)){
-            topLayer.addChild( effectTips );
+        if(!tipUtilsLayer.contains(effectTips)){
+            tipUtilsLayer.addChild( effectTips );
         }        
 
-        var onComplete2:Function = function(){
-            if(topLayer.contains(effectTips)){
-                topLayer.removeChild( effectTips );
+        let onComplete2:Function = function(){
+            if(tipUtilsLayer.contains(effectTips)){
+                tipUtilsLayer.removeChild( effectTips );
                 effectTips = null;
             }
         };

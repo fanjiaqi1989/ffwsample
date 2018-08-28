@@ -141,17 +141,18 @@ class Main extends eui.UILayer {
         //初始化框架
         ffw.FFW.ins.onInit(this.stage);
 
-        ffw.ViewManager.ins.registView("accountView",new account.AccountView());
-        ffw.ViewManager.ins.showView("accountView");
+        ffw.ViewManager.ins.registView(VIEWTYPE.ACCOUNT,new account.AccountView());
+        ffw.ViewManager.ins.registView(VIEWTYPE.HALL,new hall.HallView());
+        ffw.ViewManager.ins.registView(VIEWTYPE.GAME,new game.GameView());
 
-        //4.视图层初始化
-        // ffw.display.ScenceManager.ins.addScence("accountView",account.AccountView);
-        // ffw.display.ScenceManager.ins.showScence("accountView");
-
-        //test
-        let b = new testcase.BClass();
-        b.name;
-
+        ffw.ViewManager.ins.showView(VIEWTYPE.ACCOUNT);
     }
-
 }
+
+class VIEWTYPE{
+    public static ACCOUNT:string = "ACCOUNT";
+    public static HALL:string = "HALL";
+    public static ROOM:string = "ROOM";
+    public static GAME:string = "GAME";
+}
+

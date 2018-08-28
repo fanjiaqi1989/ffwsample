@@ -19,7 +19,7 @@ module ffw {
 			//初始化模块管理器及通信机制
 
 			//初始化场景管理器
-			// stage.addChild(display.ScenceManager.ins);
+			stage.addChild(ViewManager.ins);
 			
 			
 			console.log("FFW init complete!");

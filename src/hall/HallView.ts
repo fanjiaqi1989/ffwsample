@@ -1,39 +1,22 @@
 module hall {
-	export class HallView extends egret.DisplayObjectContainer {
-		//res loading
-		private resLoadingView:utils.ResLoadingView;
-
+	export class HallView extends ffw.View {
 		//ui
 		private hallPanel:hall.ui.HallPanel;
 
 		//components
 		private system:particle.GravityParticleSystem;
 
-
-
 		public constructor() {
 			super();
-
-			this.addEventListener(egret.Event.ADDED_TO_STAGE,this.AddToStageHandler,this);
-			this.addEventListener(egret.Event.REMOVED_FROM_STAGE,this.RemoveFromStageHandler,this);
 		}
 
-		private AddToStageHandler(e:egret.Event):void{
-			this.resLoadingView = new utils.ResLoadingView();
-			this.resLoadingView.addEventListener(utils.ResLoadingView.RES_LOAD_COMPLETE,this.onResLoadingCompleteHandler,this);
-			this.addChild(this.resLoadingView);
-			this.resLoadingView.setLoadResGroup(["hall"],[]);
+		public onLoadRes(){
+			super.onLoadRes(["hall"],[]);
 		}
+		
 
-		private RemoveFromStageHandler(e:egret.Event):void{
-			net.HallWebSocket.ins.CloseSocket();
-		}
+		public onInitView():void{
 
-		private onResLoadingCompleteHandler(e:egret.Event):void{
-			this.onInitView();
-		}
-
-		private onInitView():void{
 			this.hallPanel = new hall.ui.HallPanel();
 			this.hallPanel.width = ffw.ScaleTool.stageW;
 			this.hallPanel.height = ffw.ScaleTool.stageH;
@@ -52,6 +35,10 @@ module hall {
 			// ffw.Msg.ins.addEventListener(HallMessage.RECIEVE_UTF_MESSAGE,this.RECIEVE_UTF_MESSAGE,this);
 			net.HallWebSocket.ins.connectSocket();
 
+		}
+
+		public onRemoveView(){
+			net.HallWebSocket.ins.CloseSocket();
 		}
 
 		private onStageTouchTapHandler(e:egret.TouchEvent):void{

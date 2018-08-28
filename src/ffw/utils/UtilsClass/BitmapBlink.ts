@@ -49,7 +49,7 @@ class BitmapBlink extends egret.EventDispatcher {
     }
  
     private checkOver():boolean {
-        var nowTime:number = egret.getTimer();
+        let nowTime:number = egret.getTimer();
         if(nowTime - this._currTime >= this._time){
             this.destroy();
             return true;

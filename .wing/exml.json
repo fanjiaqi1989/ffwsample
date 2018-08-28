@@ -1,17 +1,3 @@
 {
-    "16200b62dd4": {
-        "path": "account\\ui\\AccountPanel.ts",
-        "class": "AccountPanel",
-        "parentPath": ""
-    },
-    "162044ccd05": {
-        "path": "hall\\ui\\HallPanel.ts",
-        "class": "HallPanel",
-        "parentPath": ""
-    },
-    "162e0c0646f": {
-        "path": "game\\ui\\GamePanel.ts",
-        "class": "GamePanel",
-        "parentPath": ""
-    }
+    
 }

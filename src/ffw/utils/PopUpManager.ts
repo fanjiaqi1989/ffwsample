@@ -7,12 +7,12 @@
     */
 module PopUpManager {
 
-	export var darkSprite:egret.Bitmap;
-	export var darkSpriteCount:number = 0;
+	export let darkSprite:egret.Bitmap;
+	export let darkSpriteCount:number = 0;
 
-	// export var uiLayer:egret.Sprite;
+	// export let uiLayer:egret.Sprite;
 
-	// export var popLayer:egret.Sprite;
+	// export let popLayer:egret.Sprite;
 
     /**
     * 添加面板方法
@@ -58,8 +58,8 @@ module PopUpManager {
 		}
 
 		//以下是弹窗动画
-		var leftX:number = ffw.ScaleTool.stageW/2 - popUpWidth/2;
-		var upY:number = ffw.ScaleTool.stageH/2 - popUpHeight/2;
+		let leftX:number = ffw.ScaleTool.stageW/2 - popUpWidth/2;
+		let upY:number = ffw.ScaleTool.stageH/2 - popUpHeight/2;
 
         switch(effectType){
             case 0:

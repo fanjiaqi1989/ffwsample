@@ -9,21 +9,25 @@
 
 模块下分
     场景模块 -- 基于ffw.View类：通过ViewManager进行场景切换控制。而每个场景又是独立部分。
-    --实行最基本的RES加载管理
-    --视图树形组件的管理。
-    --主流程驱动。
+        --实行最基本的RES加载管理
+        --视图树形组件的管理。
+        --主流程驱动。
     数据模块 -- 单例数据存储 
-    两种思路 
-    --1.view <-- controller --> data -- net
-    标准mvc模式，场景属于controller，view是场景组件，data则是由网络层驱动
-    --2.view -- data -- controller -- net
-    由于游戏中不仅有数据流程，更多的逻辑流程，所以基于数据的流程则显得较难理解及控制。
-                         <-->view
-    net <--> controller  <-->data
-    所以场景就是逻辑流程的核心。场景持有该场景对应模块的 view net data 引用，并通过消息直接控制各模块的行为。
+        两种思路 
+        --1.view <-- controller --> data -- net
+        标准mvc模式，场景属于controller，view是场景组件，data则是由网络层驱动
+        --2.view -- data -- controller -- net
+        由于游戏中不仅有数据流程，更多的逻辑流程，所以基于数据的流程则显得较难理解及控制。
+                            <-->view
+        net <--> controller  <-->data
+        所以场景就是逻辑流程的核心。场景持有该场景对应模块的 view net data 引用，并通过消息直接控制各模块的行为。
 
+总流程：
+    --加载preload公共资源
+    --初始化框架--注册场景
+    --启动登陆场景
+        --检测登陆状态--显示
 
-并可管理控制模块。
 
 场景的作用：相应模块请求，控制各模块的联系。相当于controller层。
 由于标准mvc由controller持有view及mode实例，现扩展为持有模块实例，并管理控制实例。

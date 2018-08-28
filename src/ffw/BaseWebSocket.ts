@@ -83,15 +83,15 @@ module ffw {
 		private onReceiveMessage(): void {
 			// GameConfig.gameScene().maskLayer.removeChild(Global.waitPanel);
 			// Global.waitPanel = null;
-			// var msg = this.sock.readUTF();
-			// var data = eval("(" + msg + ")");
+			// let msg = this.sock.readUTF();
+			// let data = eval("(" + msg + ")");
 			// ffw.Msg.ins.dispatchEvent(new egret.Event(data.cmd, data, false));
 
-			var byte: egret.ByteArray = new egret.ByteArray();
+			let byte: egret.ByteArray = new egret.ByteArray();
 			byte.endian = egret.Endian.LITTLE_ENDIAN;
 			this.sock.readBytes(byte);
 			
-			// var msg:og.Msg = og.OGPBUtil.DecodePbMessage(byte);
+			// let msg:og.Msg = og.OGPBUtil.DecodePbMessage(byte);
 
 			// ffw.Msg.ins.dispatchEventWith("Socket Received Message",false,msg);
 		}

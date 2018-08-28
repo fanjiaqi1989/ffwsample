@@ -6,7 +6,7 @@ module hall.net {
 		}
 
 		public onMsgReceive(msg:string):void{
-			var evt:egret.Event = new egret.Event(HallMessage.RECIEVE_UTF_MESSAGE,false,false,msg);
+			let evt:egret.Event = new egret.Event(HallMessage.RECIEVE_UTF_MESSAGE,false,false,msg);
 			ffw.Msg.ins.dispatchEvent(evt);
 		}
 

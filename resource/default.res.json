@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loginBg_jpg,eui_res_json,smallloading_json,smallloading_png,tip_bg_png",
+			"keys": "loginBg_jpg,eui_res_json,tip_bg_png",
 			"name": "preload"
 		},
 		{
@@ -33,16 +33,6 @@
 			"type": "sheet",
 			"name": "eui_res_json",
 			"subkeys": "border_png,button_down_png,button_up_png,checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,handle_png,header_png,off_png,on_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,selected_png,thumb_pb_png,thumb_png,track_pb_png,track_png,track_sb_png,tracklight_png"
-		},
-		{
-			"url": "assets/Preload/smallloading.json",
-			"type": "json",
-			"name": "smallloading_json"
-		},
-		{
-			"url": "assets/Preload/smallloading.png",
-			"type": "image",
-			"name": "smallloading_png"
 		},
 		{
 			"url": "assets/Hall/snowParticle.json",

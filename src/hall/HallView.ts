@@ -23,8 +23,8 @@ module hall {
 			this.addChild(this.hallPanel);
 
 			//添加点击粒子效果
-			var texture = RES.getRes("snowParticle_png");
-			var config = RES.getRes("snowParticle_json");
+			let texture = RES.getRes("snowParticle_png");
+			let config = RES.getRes("snowParticle_json");
 			this.system = new particle.GravityParticleSystem(texture, config);
 			this.stage.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onStageTouchTapHandler,this);
 			//将例子系统添加到舞台
@@ -54,7 +54,7 @@ module hall {
 		}
 		/**收到服务器返回的消息 */
 		private RECIEVE_UTF_MESSAGE(e:egret.Event):void{
-			var msg:string = e.data;
+			let msg:string = e.data;
 			this.hallPanel.addLabelScrollerText(msg);
 		}
 

@@ -38,7 +38,7 @@ class LoadingUI extends egret.Sprite {
 
     private createView():void {
 
-        var img:eui.Image = new eui.Image();//RES.getRes("timg_jpg")
+        let img:eui.Image = new eui.Image();//RES.getRes("timg_jpg")
         img.source = RES.getVersionController().getVirtualUrl("resource/assets/Preload/loginBg.jpg");//"resource/loadingres/updatebg.jpg";
         img.width = ffw.ScaleTool.stageW;
         img.height = ffw.ScaleTool.stageH;

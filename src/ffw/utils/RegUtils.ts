@@ -15,8 +15,8 @@ module RegUtils {
 	*/
 	export function checkEmail(strEmail):boolean
 	{
-	    //var emailReg = /^[_a-z0-9]+@([_a-z0-9]+\.)+[a-z0-9]{2,3}$/; 
-	    var emailReg = /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/;
+	    //let emailReg = /^[_a-z0-9]+@([_a-z0-9]+\.)+[a-z0-9]{2,3}$/; 
+	    let emailReg = /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/;
 	    if ( emailReg.test(strEmail) ) {
 	        return true;
 	    }
@@ -36,7 +36,7 @@ module RegUtils {
 	    if (isNull(strIP)) {
 	        return false;
 	    }
-	    var re = /^(\d+)\.(\d+)\.(\d+)\.(\d+)$/g //匹配IP地址的正则表达式 
+	    let re = /^(\d+)\.(\d+)\.(\d+)\.(\d+)$/g //匹配IP地址的正则表达式 
 	    if (re.test(strIP)) {
             if (Number(RegExp.$1) < 256 && Number(RegExp.$2) < 256 && Number(RegExp.$3) < 256 && Number(RegExp.$4) < 256) {
 	            return true;
@@ -52,8 +52,8 @@ module RegUtils {
 	*/
 	export function checkMobile( strMobile ):boolean
 	{
-	    var regu:string = "/^[1][3][0-9]{9}$/";
-	    var re = new RegExp(regu);
+	    let regu:string = "/^[1][3][0-9]{9}$/";
+	    let re = new RegExp(regu);
 	    if (re.test(strMobile)) {
 	        return true;
 	    }
@@ -69,9 +69,9 @@ module RegUtils {
 	*/
 	export function checkPhone( strPhone ):boolean 
 	{
-	    var phoneRegWithArea = /^[0][1-9]{2,3}-[0-9]{5,10}$/;
-	    var phoneRegNoArea = /^[1-9]{1}[0-9]{5,8}$/;
-        var prompt = "您输入的电话号码不正确!";
+	    let phoneRegWithArea = /^[0][1-9]{2,3}-[0-9]{5,10}$/;
+	    let phoneRegNoArea = /^[1-9]{1}[0-9]{5,8}$/;
+        let prompt = "您输入的电话号码不正确!";
         if (strPhone.length > 9) {
 	        if ( phoneRegWithArea.test(strPhone) ) {
 	            return true;
@@ -102,8 +102,8 @@ module RegUtils {
 	    if ( str == "" ) {
 	        return true;
 	    }
-	    var regu = "^[ ]+$";
-	    var re = new RegExp(regu);
+	    let regu = "^[ ]+$";
+	    let re = new RegExp(regu);
 	    return re.test(str);
 	};
 	 
@@ -114,7 +114,7 @@ module RegUtils {
 	*/
 	export function isInteger( str ):boolean
 	{
-	    var regu = /^[-]{0,1}[0-9]{1,}$/;
+	    let regu = /^[-]{0,1}[0-9]{1,}$/;
 	    return regu.test(str);
 	};
 	 
@@ -125,8 +125,8 @@ module RegUtils {
 	*/
 	export function isNumber( s ):boolean
 	{
-	    var regu = "^[0-9]+$";
-	    var re = new RegExp(regu);
+	    let regu = "^[0-9]+$";
+	    let re = new RegExp(regu);
 	    if (s.search(re) != - 1) {
 	        return true;
 	    }
@@ -142,8 +142,8 @@ module RegUtils {
 	*/
 	export function isMoney( s ):boolean
 	{
-	    var regu = "^[0-9]+[\.][0-9]{0,3}$";
-	    var re = new RegExp(regu);
+	    let regu = "^[0-9]+[\.][0-9]{0,3}$";
+	    let re = new RegExp(regu);
 	    if (re.test(s)) {
 	        return true;
 	    }
@@ -160,8 +160,8 @@ module RegUtils {
 	*/
 	export function cTrim(sInputString, iType):string 
 	{
-	    var sTmpStr = ' ';
-	    var i = - 1;
+	    let sTmpStr = ' ';
+	    let i = - 1;
 	    if (iType == 0 || iType == 1) 
 	    {
 	        while (sTmpStr == ' ') {
@@ -184,29 +184,29 @@ module RegUtils {
 	}
 
 	export function GetNowDate():string{
-		var now = new Date();
-		var year=now.getFullYear();
-		var month=now.getMonth()+1; 
-		var date=now.getDate(); 
-		var hour=now.getHours(); 
-		var minute=now.getMinutes(); 
-		var second=now.getSeconds(); 
-		var mill = now.getMilliseconds();
+		let now = new Date();
+		let year=now.getFullYear();
+		let month=now.getMonth()+1; 
+		let date=now.getDate(); 
+		let hour=now.getHours(); 
+		let minute=now.getMinutes(); 
+		let second=now.getSeconds(); 
+		let mill = now.getMilliseconds();
 		return year+"-"+month+"-"+date+" "+hour+":"+minute+":"+second+" "+mill; 
 	}
 
 	//字符串转字节流
 	export function decodeString2ByteArray(source:string):egret.ByteArray{
-		var result:egret.ByteArray = new egret.ByteArray();
+		let result:egret.ByteArray = new egret.ByteArray();
 		result.writeUTFBytes(source);
 		return result;
 	}
 
 	export function  ToGBKString(buffer: ArrayBuffer, byteOffset?: number, byteLength?: number):string{
               if ('TextDecoder' in window) { 
-                    var dataView = new DataView(buffer,byteOffset,byteLength);  
-                    var decoder = new window['TextDecoder']('gbk');  
-                    var decodedString = decoder.decode(dataView);  
+                    let dataView = new DataView(buffer,byteOffset,byteLength);  
+                    let decoder = new window['TextDecoder']('gbk');  
+                    let decodedString = decoder.decode(dataView);  
                     console.info(decodedString);  
                     return decodedString;
               } else {  

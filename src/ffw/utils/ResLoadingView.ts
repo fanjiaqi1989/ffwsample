@@ -16,10 +16,10 @@ module utils {
 			this.graphics.drawRect(0,0,ffw.ScaleTool.stageW,ffw.ScaleTool.stageH);
 			this.graphics.endFill();
 
-			// var data = RES.getRes("smallloading_json");
-			// var txtr = RES.getRes("smallloading_png");
-			// var mcFactory:egret.MovieClipDataFactory = new egret.MovieClipDataFactory( data, txtr );
-			// var mc1:egret.MovieClip = new egret.MovieClip( mcFactory.generateMovieClipData( "smallloading" ) );
+			// let data = RES.getRes("smallloading_json");
+			// let txtr = RES.getRes("smallloading_png");
+			// let mcFactory:egret.MovieClipDataFactory = new egret.MovieClipDataFactory( data, txtr );
+			// let mc1:egret.MovieClip = new egret.MovieClip( mcFactory.generateMovieClipData( "smallloading" ) );
 			// ffw.ScaleTool.setCenterH(mc1);
 			// ffw.ScaleTool.setCenterV(mc1);
 			// mc1.gotoAndPlay(0,-1);
@@ -36,11 +36,11 @@ module utils {
 		private aniShape:egret.Shape;
 
 		private showAnimation():void{
-			var radius:number = 50;
-			var p1:number = radius/1.414;
+			let radius:number = 50;
+			let p1:number = radius/1.414;
 
 			this.aniShape = new egret.Shape();
-			var shape:egret.Shape = this.aniShape;
+			let shape:egret.Shape = this.aniShape;
 			shape.graphics.beginFill(0xffffff,1);
 
 			shape.graphics.drawCircle(0,-radius,10);

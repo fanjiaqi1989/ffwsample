@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="AccountPanelSkin" width="1136" height="640" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
-	<w:Config id="16200b62dd4" ></w:Config>
 	<e:Image width="100%" height="100%" source="loginBg_jpg" anchorOffsetX="0" anchorOffsetY="0" fillMode="scale"/>
 	<e:Panel id="login_panel" horizontalCenter="0" verticalCenter="0">
 		<e:Skin minHeight="230" minWidth="450">

@@ -135,7 +135,6 @@ class Main extends eui.UILayer {
     protected startCreateScene(): void {
 
         console.log("renderMode:"+egret.Capabilities.renderMode);
-
         AppConf.ins.os = egret.Capabilities.os;
 
         //初始化框架
@@ -144,8 +143,11 @@ class Main extends eui.UILayer {
         ffw.ViewManager.ins.registView(VIEWTYPE.ACCOUNT,new account.AccountView());
         ffw.ViewManager.ins.registView(VIEWTYPE.HALL,new hall.HallView());
         ffw.ViewManager.ins.registView(VIEWTYPE.GAME,new game.GameView());
-
         ffw.ViewManager.ins.showView(VIEWTYPE.ACCOUNT);
+
+        // ffw.ViewManager.ins.registView(VIEWTYPE.TEST,new test.TestUIView());
+        // ffw.ViewManager.ins.showView(VIEWTYPE.TEST);
+
     }
 }
 
@@ -154,5 +156,8 @@ class VIEWTYPE{
     public static HALL:string = "HALL";
     public static ROOM:string = "ROOM";
     public static GAME:string = "GAME";
+
+    public static TEST:string = "TEST";
+
 }
 

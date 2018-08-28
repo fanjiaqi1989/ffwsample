@@ -9,7 +9,7 @@
 module EffectUtils {
 
     // 存储旋转对象
-    var rotationArr:Array<any> = [];
+    let rotationArr:Array<any> = [];
     //对象旋转特效
     //obj   旋转对象
     //time  旋转一周用时，毫秒
@@ -23,7 +23,7 @@ module EffectUtils {
         if((this.rotationArr[obj.hashCode] == null)||!this.rotationArr[obj.hashCode]){
             this.rotationArr[obj.hashCode] = true;
         }
-        var onComplete1:Function = function(){
+        let onComplete1:Function = function(){
             if(this.rotationArr[obj.hashCode]&&(obj != null)){
                 obj.rotation = 0;
                 egret.Tween.get(obj).to({rotation:360},time).call(onComplete1,this);   
@@ -52,8 +52,8 @@ module EffectUtils {
     //抖动对象特效
     //类似ios密码输入错误的特效
     export function shakeObj(obj):void{
-        var shakeNum = 80;
-        var oldX:number = obj.x;
+        let shakeNum = 80;
+        let oldX:number = obj.x;
         egret.Tween.get(obj).to({x:obj.x - 10},shakeNum); 
 
         egret.setTimeout(function () {              
@@ -74,10 +74,10 @@ module EffectUtils {
     //抖动对象特效
     // 1：抖动  2：震动
     export function shakeScreen(curPanle:any,effectType:number = 1):void{
-        var panel = curPanle;
-        var shakeNum = 40;
-        var oldX:number = panel.x;
-        var oldY:number = panel.y;
+        let panel = curPanle;
+        let shakeNum = 40;
+        let oldX:number = panel.x;
+        let oldY:number = panel.y;
 
         if(effectType == 1){
             egret.Tween.get(panel).to({x:panel.x - 10},shakeNum); 
@@ -152,7 +152,7 @@ module EffectUtils {
 
     //========================== a lot of effect will coming! ============================
    
-    var isPlayEffectPlay:Boolean = false; 
+    let isPlayEffectPlay:Boolean = false; 
     /**
     * 给显示对象增加特效
     * obj           对象
@@ -163,10 +163,10 @@ module EffectUtils {
             return;
         }
         this.isPlayEffectPlay = true;
-        var onComplete2:Function = function(){
+        let onComplete2:Function = function(){
             this.isPlayEffectPlay = false;
         }; 
-        var onComplete1:Function = function(){
+        let onComplete1:Function = function(){
             if(cartoonType == 1){
                 egret.Tween.get(obj).to({scaleX:1,scaleY:1,x:obj.x - obj.width/4,y:obj.y - obj.height/4},500,egret.Ease.elasticOut).call(onComplete2,this); 
             }else if(cartoonType == 2){
@@ -184,9 +184,9 @@ module EffectUtils {
     * obj           对象
     */
     export function playScaleEffect(obj):void{
-        var onComplete1:Function = function(){
+        let onComplete1:Function = function(){
             if(obj != null){
-                var onComplete2:Function = function(){
+                let onComplete2:Function = function(){
                     obj.scaleX = 1;
                     obj.scaleY = 1;
                     egret.Tween.get(obj).to({ alpha:1}, 1000).call(onComplete1,self)  
@@ -208,9 +208,9 @@ module EffectUtils {
     * todo          多个对象跳动
     */    
     export function flyObj(obj,time,space:number = 50):void{
-        var onComplete1:Function = function(){
+        let onComplete1:Function = function(){
             if(obj != null){
-                var onComplete2:Function = function(){
+                let onComplete2:Function = function(){
                     egret.Tween.get(obj).to({y:obj.y - space},time).call(onComplete1,this);
                 };  
                 egret.Tween.get(obj).to({y:obj.y + space},time).call(onComplete2,this);
@@ -228,9 +228,9 @@ module EffectUtils {
     * 注意：需要将对象的注册点位置：0.5,1
     */    
     export function rockObj(obj,time,space:number = 20):void{
-        var onComplete1:Function = function(){
+        let onComplete1:Function = function(){
             if(obj != null){
-                var onComplete2:Function = function(){
+                let onComplete2:Function = function(){
                     egret.Tween.get(obj).to({rotation:-space},time).call(onComplete1,this);
                 };  
                 egret.Tween.get(obj).to({rotation:space},time).call(onComplete2,this);
@@ -246,9 +246,9 @@ module EffectUtils {
     * interval      打字间隔 毫秒
     */    
     export function typerEffect(obj,content:string = "",interval:number = 200):void{
-        var strArr:Array<any> = content.split("");
-        var len:number = strArr.length;
-        for (var i = 0; i < len; i++){
+        let strArr:Array<any> = content.split("");
+        let len:number = strArr.length;
+        for (let i = 0; i < len; i++){
             egret.setTimeout(function () {              
                 obj.appendText(strArr[Number(this)]);
             }, i, interval*i);              

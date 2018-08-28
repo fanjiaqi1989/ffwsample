@@ -35,11 +35,11 @@ module hall.ui {
 		}
 
 		private onClickReturnBtnHandler(e:egret.TouchEvent):void{
-			// ViewManager.ins.showAccountView();
+			ffw.ViewManager.ins.showView(VIEWTYPE.ACCOUNT)
 		}
 
 		private onClickEnterGameBtnHandler(e:egret.TouchEvent):void{
-			// ViewManager.ins.showGameView();
+			ffw.ViewManager.ins.showView(VIEWTYPE.GAME)
 		}
 
 		private onClickSendBtnHandler(e:egret.TouchEvent):void{
@@ -53,11 +53,11 @@ module hall.ui {
 		}
 		/**加载富文本 */
 		private onClickLoadConfBtnHandler(e:egret.TouchEvent):void{
-			var list:Array<any> = RES.getRes("description_json");
-			var data:Array<string> = list[0].data;
+			let list:Array<any> = RES.getRes("description_json");
+			let data:Array<string> = list[0].data;
 			
-			var result:string = "";
-			for(var i=0;i<data.length;i++){
+			let result:string = "";
+			for(let i=0;i<data.length;i++){
 				result+=data[i];
 			}
 			this.chatLabel.textFlow = (new egret.HtmlTextParser).parser(data.toString());
@@ -68,7 +68,7 @@ module hall.ui {
 		 */
 		public addLabelScrollerText(txt:string):void{
 
-			var currentData:string = (new Date()).toTimeString();
+			let currentData:string = (new Date()).toTimeString();
 			txt = currentData +"\n"+txt;
 			//显示聊天记录
 			if(txt != ""){

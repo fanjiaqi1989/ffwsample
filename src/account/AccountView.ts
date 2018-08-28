@@ -18,11 +18,22 @@ module account {
 		public onInitView():void{
 
 			this.viewdata = AccountData.ins;
-
+			
 			this.accoutPanel = new account.ui.AccountPanel();
 			this.accoutPanel.width = ffw.ScaleTool.stageW;
 			this.accoutPanel.height = ffw.ScaleTool.stageH;
 			this.addChild(this.accoutPanel);
+
+			this.addMsgHandler();
+
+			this.viewdata.getUserLocalData();
+			if(this.viewdata.localData.uid != ""){
+				//自动登陆
+			}
+		}
+
+		private addMsgHandler():void{
+			
 		}
 
 		public onRemoveView():void{

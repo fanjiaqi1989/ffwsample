@@ -43,22 +43,22 @@ module game.ui {
 			this.addChild(this.cardFront);
 
 			this.bdata = new egret.BitmapData(RES.getRes('club_1_png'));
-			var tt:egret.Texture = RES.getRes('club_1_png');
-			var arr = tt.getPixels(0,0,tt.textureWidth,50);
+			let tt:egret.Texture = RES.getRes('club_1_png');
+			let arr = tt.getPixels(0,0,tt.textureWidth,50);
 			
 
-			// for(var  i=0;i<arr.length;i=i+4){
-			// 	var str:string = "0x"+arr[i].toString(16)+arr[i+1].toString(16)+arr[i+2].toString(16);
+			// for(let  i=0;i<arr.length;i=i+4){
+			// 	let str:string = "0x"+arr[i].toString(16)+arr[i+1].toString(16)+arr[i+2].toString(16);
 			// 	console.log("color:"+str);
 			// 	console.log("number:"+Number(str));
 			// }
-			// var newbtmp:egret.Bitmap = new egret.Bitmap();
-			// var newbmd:egret.BitmapData = new egret.BitmapData(arr);
+			// let newbtmp:egret.Bitmap = new egret.Bitmap();
+			// let newbmd:egret.BitmapData = new egret.BitmapData(arr);
 			// newbtmp.bitmapData = newbmd;
 			// this.addChild(newbtmp);
 			// newbtmp.x = 300;
 
-			// var spr:egret.Shape = new egret.Shape();
+			// let spr:egret.Shape = new egret.Shape();
 			// spr.graphics
 			// console.log("over"+arr[0].toFixed(16));
 		}

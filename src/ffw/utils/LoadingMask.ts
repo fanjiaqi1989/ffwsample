@@ -14,7 +14,7 @@ module utils {
 
             this.touchEnabled = true;
 
-			var halfAlpha:egret.Shape = new egret.Shape();
+			let halfAlpha:egret.Shape = new egret.Shape();
 			halfAlpha.graphics.beginFill(0x000000,0.3);
 			halfAlpha.graphics.drawRect(0,0,this.width,this.height);
 			halfAlpha.graphics.endFill();
@@ -30,9 +30,9 @@ module utils {
             this.addChild(this.sprite);
             this.sprite.x = this.width / 2;
             this.sprite.y = this.height / 2;
-            for (var i:number = 0; i < this.nums; i++)
+            for (let i:number = 0; i < this.nums; i++)
             {
-				var shape:egret.Shape = new egret.Shape();
+				let shape:egret.Shape = new egret.Shape();
                 shape.graphics.beginFill(0xffffff);
                 shape.graphics.drawCircle(0,0,10);
                 shape.graphics.endFill();
@@ -48,9 +48,9 @@ module utils {
         }
         private alphaHalder(evt:egret.Event):void
         {
-            for (var i:number = 0; i < this.nums; i++)
+            for (let i:number = 0; i < this.nums; i++)
             {
-                var shape:egret.Shape = this.arr[i] as egret.Shape;
+                let shape:egret.Shape = this.arr[i] as egret.Shape;
                 shape.alpha = this.j;
                 shape.scaleX = this.j;
                 shape.scaleY = this.j;

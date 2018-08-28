@@ -88,11 +88,11 @@ module hall.net {
 		//接受返回消息
 		private onReceiveMessage(): void {
 			this.heartCount = 0;
-			// var byte: egret.ByteArray = new egret.ByteArray();
+			// let byte: egret.ByteArray = new egret.ByteArray();
 			// byte.endian = egret.Endian.LITTLE_ENDIAN;
 			// this.sock.readBytes(byte);
 			// this.recevieHandler.onDataPackReceive(msg.body, msg.id, msg.result);
-			var msg = this.sock.readUTF();
+			let msg = this.sock.readUTF();
 			this.recevieHandler.onMsgReceive(msg);
     		console.log("收到数据：" + msg);
 		}

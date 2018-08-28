@@ -50,5 +50,7 @@ class AppConf {
 
 	public hallWebSocket_PORT:number = 80;
 
+	public user_login_service:string = "http://www.asdfzxcv.com";
+
 	
 }

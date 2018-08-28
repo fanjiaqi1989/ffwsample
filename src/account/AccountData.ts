@@ -11,14 +11,38 @@ module account {
 
 		}
 
-		private uid:string;
-		private un:string;
-		private token:string;
-		/**初始化数据 */
-		public initData(){
 
+
+		public uid:string;
+		public uname:string;
+		public token:string;
+
+		public localData:UserLocalStorage;
+		
+
+		getUserLocalData():void{
+			let data = egret.localStorage.getItem("userdata");
+			if(data != null && data != ""){
+				this.localData = JSON.parse(data);
+			}else{
+				this.localData = new UserLocalStorage();
+			}
 		}
 
+		setUserLocalData():void{
+			this.localData.saveDate = (new Date()).getUTCMinutes();
+			let data = JSON.stringify(this.localData);
+			egret.localStorage.setItem("userdata",data);
+		}
+
+	}
+
+	/**用于记录用户的本地设置缓存 */
+	export class UserLocalStorage{
+		saveDate:number = 0;
+		uid:string = "";
+		uname:string = "";
+		type:number = 0;
 	}
 
 }

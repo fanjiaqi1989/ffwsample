@@ -25,8 +25,11 @@ module test {
 			let viewdata:account.AccountData =account.AccountData.ins;
 
 			this.accountview = new account.AccountView();
-			this.addChild(this.accountview);
+			// this.addChild(this.accountview);
 			this.accountview.onLoadRes();
+
+			let accountPanel:account.ui.AccountPanel = new account.ui.AccountPanel();
+			this.addChild(accountPanel);
 		}
 
 		private testHall():void{

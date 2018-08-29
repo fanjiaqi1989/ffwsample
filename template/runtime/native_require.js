@@ -52,6 +52,7 @@ var game_file_list = [
 	"bin-debug/hall/ui/HallPanel.js",
 	"bin-debug/LoadingUI.js",
 	"bin-debug/Main.js",
+	"bin-debug/test/TestNetView.js",
 	"bin-debug/test/TestUIView.js",
 	"bin-debug/ThemeAdapter.js",
 	//----auto game_file_list end----

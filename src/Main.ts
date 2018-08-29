@@ -146,7 +146,9 @@ class Main extends eui.UILayer {
         ffw.ViewManager.ins.showView(VIEWTYPE.ACCOUNT);
 
         // ffw.ViewManager.ins.registView(VIEWTYPE.TEST,new test.TestUIView());
+        // ffw.ViewManager.ins.registView(VIEWTYPE.TESTNET,new test.TestNetView());
         // ffw.ViewManager.ins.showView(VIEWTYPE.TEST);
+        // ffw.ViewManager.ins.showView(VIEWTYPE.TESTNET);
 
     }
 }
@@ -158,6 +160,7 @@ class VIEWTYPE{
     public static GAME:string = "GAME";
 
     public static TEST:string = "TEST";
+    public static TESTNET:string = "TESTNET";
 
 }
 

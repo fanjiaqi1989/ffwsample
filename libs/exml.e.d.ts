@@ -58,3 +58,5 @@ declare class GamePanelSkin extends eui.Skin{
 }
 declare class HallPanelSkin extends eui.Skin{
 }
+declare class CommonTipPanel extends eui.Skin{
+}

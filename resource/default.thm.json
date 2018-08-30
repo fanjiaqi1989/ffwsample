@@ -36,6 +36,7 @@
     "resource/my_skins/account/AccountPanel.exml",
     "resource/my_skins/account/RegistPanel.exml",
     "resource/my_skins/game/GamePanel.exml",
-    "resource/my_skins/hall/HallPanel.exml"
+    "resource/my_skins/hall/HallPanel.exml",
+    "resource/my_skins/preload/CommonTipPanel.exml"
   ]
 }

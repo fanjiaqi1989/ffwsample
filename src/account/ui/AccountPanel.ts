@@ -19,6 +19,8 @@ module account.ui {
 			super.childrenCreated();
 			this.login_panel.titleDisplay.text = "登陆面板";
 			this.login_panel.closeButton.label = "登陆";
+
+			
 			this.login_panel.addEventListener(eui.UIEvent.CLOSING,this.onClickLoginHandler,this);
 		}
 

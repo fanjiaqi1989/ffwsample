@@ -36,36 +36,33 @@
 	<!--modules_files_end-->
 
     <!--这个标签为不通过egret提供的第三方库的方式使用的 javascript 文件，请将这些文件放在libs下，但不要放在modules下面。-->
-    <!--other_libs_files_start-->
-    <script egret="lib" src="polyfill/promise.js" src-release="polyfill/promise.min.js"></script>
-    <!--other_libs_files_end-->
+    
 
     <!--这个标签会被替换为项目中所有的 javascript 文件。删除 game_files 标签后，项目文件加载列表将不会变化，请谨慎操作！-->
     <!--game_files_start-->
-	<script egret="game" src="bin-debug/ffw/View.js"></script>
+	<script egret="game" src="bin-debug/ffw/core/View.js"></script>
 	<script egret="game" src="bin-debug/game/ui/components/CardBase.js"></script>
-	<script egret="game" src="bin-debug/ffw/utils/UtilsClass/TipsUtils.js"></script>
+	<script egret="game" src="bin-debug/ffw/utils/ScaleTool.js"></script>
 	<script egret="game" src="bin-debug/account/ui/AccountPanel.js"></script>
 	<script egret="game" src="bin-debug/AppConf.js"></script>
 	<script egret="game" src="bin-debug/AssetAdapter.js"></script>
-	<script egret="game" src="bin-debug/ffw/BaseHttpRequest.js"></script>
-	<script egret="game" src="bin-debug/ffw/BaseWebSocket.js"></script>
+	<script egret="game" src="bin-debug/ffw/core/Msg.js"></script>
+	<script egret="game" src="bin-debug/account/AccountData.js"></script>
+	<script egret="game" src="bin-debug/ffw/core/ViewManager.js"></script>
 	<script egret="game" src="bin-debug/ffw/FFW.js"></script>
 	<script egret="game" src="bin-debug/ffw/FrameworkConfig.js"></script>
-	<script egret="game" src="bin-debug/ffw/IView.js"></script>
 	<script egret="game" src="bin-debug/ffw/log/Logger.js"></script>
-	<script egret="game" src="bin-debug/ffw/Msg.js"></script>
+	<script egret="game" src="bin-debug/ffw/net/BaseHttpRequest.js"></script>
+	<script egret="game" src="bin-debug/ffw/net/BaseWebSocket.js"></script>
 	<script egret="game" src="bin-debug/ffw/utils/EffectUtils.js"></script>
 	<script egret="game" src="bin-debug/ffw/utils/LoadingMask.js"></script>
 	<script egret="game" src="bin-debug/ffw/utils/md5.js"></script>
 	<script egret="game" src="bin-debug/ffw/utils/PopUpManager.js"></script>
 	<script egret="game" src="bin-debug/ffw/utils/RegUtils.js"></script>
 	<script egret="game" src="bin-debug/ffw/utils/ResLoadingView.js"></script>
-	<script egret="game" src="bin-debug/ffw/utils/ScaleTool.js"></script>
-	<script egret="game" src="bin-debug/ffw/utils/UtilsClass/BitmapBlink.js"></script>
 	<script egret="game" src="bin-debug/account/AccountMsg.js"></script>
-	<script egret="game" src="bin-debug/account/AccountData.js"></script>
-	<script egret="game" src="bin-debug/ffw/ViewManager.js"></script>
+	<script egret="game" src="bin-debug/ffw/utils/UtilsClass/BitmapBlink.js"></script>
+	<script egret="game" src="bin-debug/ffw/utils/UtilsClass/TipsUtils.js"></script>
 	<script egret="game" src="bin-debug/game/GameView.js"></script>
 	<script egret="game" src="bin-debug/account/AccountView.js"></script>
 	<script egret="game" src="bin-debug/game/ui/components/DownCard.js"></script>

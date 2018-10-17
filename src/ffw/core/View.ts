@@ -1,5 +1,5 @@
 module ffw {
-	export class View extends egret.DisplayObjectContainer implements IView {
+	export class View extends egret.DisplayObjectContainer {
 
 		//res loading
 		private resLoadingView:utils.ResLoadingView;

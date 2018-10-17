@@ -24,7 +24,7 @@ export class ViewManager extends egret.DisplayObjectContainer {
 	private bottomLayer:egret.DisplayObjectContainer;
 	//---------------------------------------system---------------------------------//
 	/**view 列表 */
-	private viewList:{[vname:string]:IView} = {};
+	private viewList:{[vname:string]:View} = {};
 
 	public constructor() {
 		super();
@@ -42,7 +42,7 @@ export class ViewManager extends egret.DisplayObjectContainer {
 		TipsUtils.tipUtilsLayer = this.tipUtilsLayer;
 	}
 
-	registView(name:string,v:IView):void{
+	registView(name:string,v:View):void{
 		this.viewList[name] = v;
 	}
 

@@ -24,16 +24,10 @@ module account {
 			this.accoutPanel.height = ffw.ScaleTool.stageH;
 			this.addChild(this.accoutPanel);
 
-			this.addMsgHandler();
-
 			this.viewdata.getUserLocalData();
 			if(this.viewdata.localData.uid != ""){
 				//自动登陆
 			}
-		}
-
-		private addMsgHandler():void{
-			
 		}
 
 		public onRemoveView():void{

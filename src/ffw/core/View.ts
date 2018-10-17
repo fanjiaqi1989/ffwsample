@@ -4,6 +4,8 @@ module ffw {
 		//res loading
 		private resLoadingView:utils.ResLoadingView;
 		//
+		private event_dispatch:egret.EventDispatcher;
+		//
 		private _isresloaded:boolean = false;
 		public get isresloaded():boolean{
 			return this._isresloaded;
@@ -33,6 +35,14 @@ module ffw {
 		}
 		public onRemoveView(){
 
+		}
+
+		public addComp():void{
+
+		}
+
+		public removeComp():void{
+			
 		}
 
 		public onDestroyRes(name:string[]=[]):void{

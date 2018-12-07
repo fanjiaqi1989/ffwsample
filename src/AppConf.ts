@@ -8,7 +8,7 @@ class AppConf {
 	 */
 	public static appType:number = 1;
 
-	public version:string = "V2.4.10";
+	public version:string = "V1.0.10";
 
 	public constructor() {
 	}

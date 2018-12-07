@@ -32,15 +32,15 @@
     },
     {
       "name": "particle",
-      "path": "../outlibs"
+      "path": "./libs/particle"
     },
 		{
-			"name": "Zlib",
-			"path": "../outlibs"
+			"name": "zlib",
+			"path": "./libs/zlib"
 		},
 		{
 			"name": "ProtoBuf",
-			"path": "../outlibs"
+			"path": "./libs/ProtoBuf"
 		}
   ]
 }

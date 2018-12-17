@@ -149,7 +149,6 @@ class Main extends eui.UILayer {
         // ffw.ViewManager.ins.registView(VIEWTYPE.TESTNET,new test.TestNetView());
         // ffw.ViewManager.ins.showView(VIEWTYPE.TEST);
         // ffw.ViewManager.ins.showView(VIEWTYPE.TESTNET);
-
     }
 }
 

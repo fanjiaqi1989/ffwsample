@@ -24,6 +24,7 @@ module hall.net {
 
 		//=================================================
 		public sock: egret.WebSocket;
+		public pbfac :ffw.net.PbFactoryNew;
 		public senderHandler: HallSocketSendHandler;
 		private recevieHandler: HallSocketReceiveHandler;
 		//是否正在连接，如果正在连接，并没有返回，不进行重连处理，防止异步多socket被重复连接
@@ -40,7 +41,7 @@ module hall.net {
 		public heartDelay:number = 0;
 		
 		public constructor() {
-			// this.pbfac = new commons.PbFactory("appprotobuf_txt");
+			// this.pbfac = new ffw.net.PbFactoryNew("app_proto_txt");
 			this.senderHandler = new HallSocketSendHandler(this);
 			this.recevieHandler = new HallSocketReceiveHandler();
 			//心跳计数器
@@ -130,6 +131,33 @@ module hall.net {
 			//启动心跳计时器
 			this.heartCount = 0;
 			this.heartBeatTimer.start();
+
+			// var Persion = this.pbfac.build("Person");
+			// var SC_Location = this.pbfac.build("SC_Location");
+
+			// var lmessage = SC_Location.create({});
+			// lmessage.region = "zzz";
+			// lmessage.country = "mmm";
+			// // example code
+			// var message = Persion.create({});
+			// message.name = "asdf";
+			// message.address = "tang yan lu";
+			// message.phoneNumber = "1231ss23";
+			// message.age = 14;
+			// message.location = lmessage;
+
+			// var buffer  = Persion.encode(message).finish();
+			// var decoded = Persion.decode(buffer);
+
+			var p2:pb.Person = pb.Person.create();
+			p2.name = "asdf";
+			p2.address = "tang yan lu";
+			p2.phone_number = "1231ss23";
+			p2.age = 14;
+
+			var buffer2 = pb.Person.encode(p2).finish();
+			var decoded2 = pb.Person.decode(buffer2);
+
 		}
 
 		//socket 关闭

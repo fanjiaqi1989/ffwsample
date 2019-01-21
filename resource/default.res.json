@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "loginBg_jpg,eui_res_json,tip_bg_png",
+			"keys": "loginBg_jpg,eui_res_json,tip_bg_png,descriptor_txt,app_proto_txt",
 			"name": "preload"
 		},
 		{
@@ -63,6 +63,16 @@
 			"url": "assets/Game/club_1.png",
 			"type": "image",
 			"name": "club_1_png"
+		},
+		{
+			"url": "config/descriptor.txt",
+			"type": "text",
+			"name": "descriptor_txt"
+		},
+		{
+			"name": "app_proto_txt",
+			"type": "text",
+			"url": "config/app_proto.txt"
 		}
 	]
 }

@@ -1,0 +1,18 @@
+syntax = "proto2";
+
+package pb;
+
+//1
+message Person {
+	required string name = 1;
+	required string address = 2;
+	required string phone_number = 3;
+	required int32 age = 4;
+	optional SC_Location location = 5;
+}
+
+//2
+message SC_Location {
+    required string region = 1;
+    required string country = 2;
+}
